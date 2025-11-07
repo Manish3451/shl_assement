@@ -30,6 +30,13 @@ secrets.*
 *.pem
 *.key
 
+```
+.streamlit/secrets.toml
+.env
+__pycache__/
+*.pyc
+data/vector_store/
+
 # -------------------------
 # OS / IDE files
 # -------------------------

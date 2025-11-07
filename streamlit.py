@@ -11,9 +11,60 @@ sys.path.insert(0, str(REPO_ROOT))
 
 import streamlit as st
 
-# Import your retriever and chat modules
-from backend.services.retriever import retrieve_documents
-from backend.services.chat import call_chat, format_recommendations
+# Define paths
+VECTOR_STORE_PATH = REPO_ROOT / "data" / "vector_store"
+COMBINED_DATA_PATH = REPO_ROOT / "data" / "combined_assessments.json"
+
+# Check if vector store exists, if not offer to build it
+def check_and_build_vector_store():
+    """Check if FAISS vector store exists, build if missing"""
+    if not VECTOR_STORE_PATH.exists() or not any(VECTOR_STORE_PATH.iterdir()):
+        st.warning("⚠️ Vector store not found. Building it for the first time...")
+        
+        with st.spinner("🔨 Building vector store (this may take 2-5 minutes)..."):
+            try:
+                # Check if combined data exists
+                if not COMBINED_DATA_PATH.exists():
+                    st.error("❌ Combined assessment data not found. Please run data preprocessing first:")
+                    st.code("""
+# Run these commands in your terminal:
+cd backend/services
+python scraper.py
+python combine_res.py
+                    """)
+                    st.stop()
+                
+                # Import and run embedding generation
+                from backend.services.embedder import main as create_embeddings
+                
+                st.info("📊 Creating embeddings from assessment data...")
+                create_embeddings()
+                
+                st.success("✅ Vector store created successfully!")
+                st.balloons()
+                time.sleep(2)
+                st.rerun()
+                
+            except ImportError as e:
+                st.error(f"❌ Import error: {str(e)}")
+                st.info("Make sure all dependencies are installed: `pip install -r requirements.txt`")
+                st.stop()
+            except Exception as e:
+                st.error(f"❌ Failed to build vector store: {str(e)}")
+                st.exception(e)
+                st.stop()
+
+# Run the check before proceeding
+check_and_build_vector_store()
+
+# Import your retriever and chat modules (after vector store check)
+try:
+    from backend.services.retriever import retrieve_documents
+    from backend.services.chat import call_chat, format_recommendations
+except Exception as e:
+    st.error(f"❌ Failed to import modules: {str(e)}")
+    st.info("Ensure vector store is built and all dependencies are installed.")
+    st.stop()
 
 # Basic UI
 st.set_page_config(page_title="SHL Assessment Recommender", layout="wide")
@@ -23,6 +74,18 @@ st.markdown("Find the perfect SHL assessment for your hiring needs using AI-powe
 # Sidebar settings
 with st.sidebar:
     st.header("⚙️ Settings")
+    
+    # Show vector store status
+    st.subheader("📦 System Status")
+    if VECTOR_STORE_PATH.exists():
+        st.success("✅ Vector store loaded")
+        # Count files in vector store
+        faiss_files = list(VECTOR_STORE_PATH.glob("*"))
+        st.caption(f"{len(faiss_files)} files in vector store")
+    else:
+        st.error("❌ Vector store missing")
+    
+    st.markdown("---")
     
     st.subheader("Retrieval Settings")
     mode = st.selectbox(
@@ -73,12 +136,29 @@ with st.sidebar:
     st.markdown("---")
     
     st.subheader("Environment")
-    api_key_present = 'OPENAI_API_KEY' in os.environ or (REPO_ROOT / '.env').exists()
+    # Check for API key in secrets or environment
+    api_key_present = False
+    if hasattr(st, 'secrets') and 'OPENAI_API_KEY' in st.secrets:
+        api_key_present = True
+        os.environ['OPENAI_API_KEY'] = st.secrets['OPENAI_API_KEY']
+    elif 'OPENAI_API_KEY' in os.environ:
+        api_key_present = True
+    elif (REPO_ROOT / '.env').exists():
+        api_key_present = True
+    
     if api_key_present:
         st.success("✅ OpenAI API key detected")
     else:
         st.error("❌ OpenAI API key not found")
-        st.info("Set OPENAI_API_KEY in your environment or .env file")
+        st.info("Set OPENAI_API_KEY in Streamlit secrets or .env file")
+    
+    # Option to rebuild vector store
+    st.markdown("---")
+    if st.button("🔄 Rebuild Vector Store"):
+        import shutil
+        if VECTOR_STORE_PATH.exists():
+            shutil.rmtree(VECTOR_STORE_PATH)
+        st.rerun()
 
 # Main content area
 st.markdown("---")
