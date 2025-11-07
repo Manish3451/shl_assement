@@ -27,6 +27,15 @@ Key parts:
   <em>Figure 1 — Project folder structure (backend/services, data, docker, etc.)</em>
 </p>
 
+---
+
+<p align="center">
+  <img src="images/architecture.png" alt="Architecture" width="900" />
+  <br/>
+  <em>Figure 1 — Project folder structure (backend/services, data, docker, etc.)</em>
+</p>
+
+
 ```
 SHL_RAG/
 ├─ backend/
