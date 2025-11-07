@@ -32,7 +32,7 @@ Key parts:
 <p align="center">
   <img src="images/architecture.png" alt="Architecture" width="900" />
   <br/>
-  <em>Figure 1 — Project folder structure (backend/services, data, docker, etc.)</em>
+  <em>Figure 2 — Architecture Digram for this Project</em>
 </p>
 
 
