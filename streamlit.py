@@ -13,7 +13,7 @@ import streamlit as st
 
 # Define paths
 VECTOR_STORE_PATH = REPO_ROOT / "data" / "vector_store"
-COMBINED_DATA_PATH = REPO_ROOT / "data" / "combined_assessments.json"
+COMBINED_DATA_PATH = REPO_ROOT / "data" / "shl_all_assessments.json"
 
 # Check if vector store exists, if not offer to build it
 def check_and_build_vector_store():
