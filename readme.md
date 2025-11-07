@@ -126,5 +126,3 @@ These show very strong ranking quality; the main friction is LLM re-ranking late
 ---
 
 
----
-
