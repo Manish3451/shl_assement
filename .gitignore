@@ -1,0 +1,101 @@
+# -------------------------
+# Python cache & bytecode
+# -------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+
+# -------------------------
+# Virtual environments
+# -------------------------
+venv/
+env/
+.shl_rag/
+.Python
+.venv/
+.python-version
+
+# Ignore Python virtual environments
+venv/
+env/
+shl_rag/
+
+
+# -------------------------
+# Secrets / Environment
+# -------------------------
+.env
+.env.*
+secrets.*
+*.pem
+*.key
+
+# -------------------------
+# OS / IDE files
+# -------------------------
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# -------------------------
+# Logs / temp files
+# -------------------------
+*.log
+logs/
+*.tmp
+*.cache
+
+# -------------------------
+# Data / artifacts
+# -------------------------
+data/vector_store/
+data/vector_store/**
+*.pkl
+*.index
+*.faiss
+faiss_store/
+index.faiss
+index.pkl
+
+# -------------------------
+# Keep these small data files
+# -------------------------
+!data/shl_all_assessments.json
+!data/individual_solutions.json
+!data/prepackaged_solutions.json
+
+# -------------------------
+# LangChain / local caches
+# -------------------------
+openai_cache/
+langchain.db
+*.sqlite
+embeddings/
+*.db
+
+# -------------------------
+# Jupyter / Notebooks
+# -------------------------
+.ipynb_checkpoints/
+*.ipynb
+
+# -------------------------
+# Streamlit
+# -------------------------
+.streamlit/
+
+# -------------------------
+# Docker
+# -------------------------
+docker-compose.override.yml
+*.tar
+*.img
+
+# -------------------------
+# Distribution / builds
+# -------------------------
+build/
+dist/
+*.egg-info/
+*.egg

@@ -1,0 +1,659 @@
+category,name,url,remote_testing,adaptive_irt,test_type,page_number,source
+Individual Test Solutions,Global Skills Development Report,https://www.shl.com/products/product-catalog/view/global-skills-development-report/,,,"A
+E
+B
+C
+D
+P",1,SHL Catalog
+Individual Test Solutions,.NET Framework 4.5,https://www.shl.com/products/product-catalog/view/net-framework-4-5/,,,K,1,SHL Catalog
+Individual Test Solutions,.NET MVC (New),https://www.shl.com/products/product-catalog/view/net-mvc-new/,,,K,1,SHL Catalog
+Individual Test Solutions,.NET MVVM (New),https://www.shl.com/products/product-catalog/view/net-mvvm-new/,,,K,1,SHL Catalog
+Individual Test Solutions,.NET WCF (New),https://www.shl.com/products/product-catalog/view/net-wcf-new/,,,K,1,SHL Catalog
+Individual Test Solutions,.NET WPF (New),https://www.shl.com/products/product-catalog/view/net-wpf-new/,,,K,1,SHL Catalog
+Individual Test Solutions,.NET XAML (New),https://www.shl.com/products/product-catalog/view/net-xaml-new/,,,K,1,SHL Catalog
+Individual Test Solutions,Accounts Payable (New),https://www.shl.com/products/product-catalog/view/accounts-payable-new/,,,K,1,SHL Catalog
+Individual Test Solutions,Accounts Payable Simulation (New),https://www.shl.com/products/product-catalog/view/accounts-payable-simulation-new/,,,S,1,SHL Catalog
+Individual Test Solutions,Accounts Receivable (New),https://www.shl.com/products/product-catalog/view/accounts-receivable-new/,,,K,1,SHL Catalog
+Individual Test Solutions,Accounts Receivable Simulation (New),https://www.shl.com/products/product-catalog/view/accounts-receivable-simulation-new/,,,S,1,SHL Catalog
+Individual Test Solutions,ADO.NET (New),https://www.shl.com/products/product-catalog/view/ado-net-new/,,,K,1,SHL Catalog
+Individual Test Solutions,Adobe Experience Manager (New),https://www.shl.com/products/product-catalog/view/adobe-experience-manager-new/,,,K,2,SHL Catalog
+Individual Test Solutions,Adobe Photoshop CC,https://www.shl.com/products/product-catalog/view/adobe-photoshop-cc/,,,K,2,SHL Catalog
+Individual Test Solutions,Aeronautical Engineering (New),https://www.shl.com/products/product-catalog/view/aeronautical-engineering-new/,,,K,2,SHL Catalog
+Individual Test Solutions,Aerospace Engineering (New),https://www.shl.com/products/product-catalog/view/aerospace-engineering-new/,,,K,2,SHL Catalog
+Individual Test Solutions,Agile Software Development,https://www.shl.com/products/product-catalog/view/agile-software-development/,,,K,2,SHL Catalog
+Individual Test Solutions,Agile Testing (New),https://www.shl.com/products/product-catalog/view/agile-testing-new/,,,K,2,SHL Catalog
+Individual Test Solutions,AI Skills,https://www.shl.com/products/product-catalog/view/ai-skills/,,,P,2,SHL Catalog
+Individual Test Solutions,Amazon Web Services (AWS) Development (New),https://www.shl.com/products/product-catalog/view/amazon-web-services-aws-development-new/,,,K,2,SHL Catalog
+Individual Test Solutions,Android Development (New),https://www.shl.com/products/product-catalog/view/android-development-new/,,,K,2,SHL Catalog
+Individual Test Solutions,Angular 6 (New),https://www.shl.com/products/product-catalog/view/angular-6-new/,,,K,2,SHL Catalog
+Individual Test Solutions,AngularJS (New),https://www.shl.com/products/product-catalog/view/angularjs-new/,,,K,2,SHL Catalog
+Individual Test Solutions,Apache Hadoop (New),https://www.shl.com/products/product-catalog/view/apache-hadoop-new/,,,K,2,SHL Catalog
+Individual Test Solutions,Apache Hadoop Extensions (New),https://www.shl.com/products/product-catalog/view/apache-hadoop-extensions-new/,,,K,3,SHL Catalog
+Individual Test Solutions,Apache HBase (New),https://www.shl.com/products/product-catalog/view/apache-hbase-new/,,,K,3,SHL Catalog
+Individual Test Solutions,Apache Hive (New),https://www.shl.com/products/product-catalog/view/apache-hive-new/,,,K,3,SHL Catalog
+Individual Test Solutions,Apache Kafka (New),https://www.shl.com/products/product-catalog/view/apache-kafka-new/,,,K,3,SHL Catalog
+Individual Test Solutions,Apache Pig (New),https://www.shl.com/products/product-catalog/view/apache-pig-new/,,,K,3,SHL Catalog
+Individual Test Solutions,Apache Spark (New),https://www.shl.com/products/product-catalog/view/apache-spark-new/,,,K,3,SHL Catalog
+Individual Test Solutions,ASP .NET with C# (New),https://www.shl.com/products/product-catalog/view/asp-net-with-c-new/,,,K,3,SHL Catalog
+Individual Test Solutions,ASP.NET 4.5,https://www.shl.com/products/product-catalog/view/asp-net-4-5/,,,K,3,SHL Catalog
+Individual Test Solutions,Assessment and Development Center Exercises,https://www.shl.com/products/product-catalog/view/assessment-and-development-center-exercises/,,,E,3,SHL Catalog
+Individual Test Solutions,Automata - Fix (New),https://www.shl.com/products/product-catalog/view/automata-fix-new/,,,S,3,SHL Catalog
+Individual Test Solutions,Automata - SQL (New),https://www.shl.com/products/product-catalog/view/automata-sql-new/,,,S,3,SHL Catalog
+Individual Test Solutions,Automata (New),https://www.shl.com/products/product-catalog/view/automata-new/,,,S,3,SHL Catalog
+Individual Test Solutions,Automata Data Science (New),https://www.shl.com/products/product-catalog/view/automata-data-science-new/,,,S,4,SHL Catalog
+Individual Test Solutions,Automata Data Science Pro (New),https://www.shl.com/products/product-catalog/view/automata-data-science-pro-new/,,,S,4,SHL Catalog
+Individual Test Solutions,Automata Front End,https://www.shl.com/products/product-catalog/view/automata-front-end/,,,S,4,SHL Catalog
+Individual Test Solutions,Automata Pro (New),https://www.shl.com/products/product-catalog/view/automata-pro-new/,,,S,4,SHL Catalog
+Individual Test Solutions,Automata Selenium,https://www.shl.com/products/product-catalog/view/automata-selenium/,,,S,4,SHL Catalog
+Individual Test Solutions,Automation Anywhere RPA Development (New),https://www.shl.com/products/product-catalog/view/automation-anywhere-rpa-development-new/,,,K,4,SHL Catalog
+Individual Test Solutions,Automotive Engineering (New),https://www.shl.com/products/product-catalog/view/automotive-engineering-new/,,,K,4,SHL Catalog
+Individual Test Solutions,Basic Biology (New),https://www.shl.com/products/product-catalog/view/basic-biology-new/,,,K,4,SHL Catalog
+Individual Test Solutions,Basic Computer Literacy (Windows 10) (New),https://www.shl.com/products/product-catalog/view/basic-computer-literacy-windows-10-new/,,,"S
+K",4,SHL Catalog
+Individual Test Solutions,Basic Statistics (New),https://www.shl.com/products/product-catalog/view/basic-statistics-new/,,,K,4,SHL Catalog
+Individual Test Solutions,Biochemistry (New),https://www.shl.com/products/product-catalog/view/biochemistry-new/,,,K,4,SHL Catalog
+Individual Test Solutions,Biotech Lab Techniques (New),https://www.shl.com/products/product-catalog/view/biotech-lab-techniques-new/,,,K,4,SHL Catalog
+Individual Test Solutions,BizTalk (New),https://www.shl.com/products/product-catalog/view/biztalk-new/,,,K,5,SHL Catalog
+Individual Test Solutions,Business Communication (adaptive),https://www.shl.com/products/product-catalog/view/business-communication-adaptive/,,,K,5,SHL Catalog
+Individual Test Solutions,Business Communications,https://www.shl.com/products/product-catalog/view/business-communications/,,,K,5,SHL Catalog
+Individual Test Solutions,C Programming (New),https://www.shl.com/products/product-catalog/view/c-programming-new/,,,K,5,SHL Catalog
+Individual Test Solutions,C# Programming (New),https://www.shl.com/products/product-catalog/view/c-programming-new-4039/,,,K,5,SHL Catalog
+Individual Test Solutions,C++ Programming (New),https://www.shl.com/products/product-catalog/view/c-programming-new-4122/,,,K,5,SHL Catalog
+Individual Test Solutions,Cardiology and Diabetes Management (New),https://www.shl.com/products/product-catalog/view/cardiology-and-diabetes-management-new/,,,K,5,SHL Catalog
+Individual Test Solutions,Ceramic Engineering (New),https://www.shl.com/products/product-catalog/view/ceramic-engineering-new/,,,K,5,SHL Catalog
+Individual Test Solutions,Chemical Engineering (New),https://www.shl.com/products/product-catalog/view/chemical-engineering-new/,,,K,5,SHL Catalog
+Individual Test Solutions,Cisco AppDynamics (New),https://www.shl.com/products/product-catalog/view/cisco-appdynamics-new/,,,K,5,SHL Catalog
+Individual Test Solutions,Civil Engineering (New),https://www.shl.com/products/product-catalog/view/civil-engineering-new/,,,K,5,SHL Catalog
+Individual Test Solutions,Cloud Computing (New),https://www.shl.com/products/product-catalog/view/cloud-computing-new/,,,K,5,SHL Catalog
+Individual Test Solutions,COBOL Programming (New),https://www.shl.com/products/product-catalog/view/cobol-programming-new/,,,K,6,SHL Catalog
+Individual Test Solutions,Computer Science (New),https://www.shl.com/products/product-catalog/view/computer-science-new/,,,K,6,SHL Catalog
+Individual Test Solutions,Contact Center Call Simulation (New),https://www.shl.com/products/product-catalog/view/contact-center-call-simulation-new/,,,S,6,SHL Catalog
+Individual Test Solutions,Conversational Multichat Simulation,https://www.shl.com/products/product-catalog/view/conversational-multichat-simulation/,,,S,6,SHL Catalog
+Individual Test Solutions,Core Java (Advanced Level) (New),https://www.shl.com/products/product-catalog/view/core-java-advanced-level-new/,,,K,6,SHL Catalog
+Individual Test Solutions,Core Java (Entry Level) (New),https://www.shl.com/products/product-catalog/view/core-java-entry-level-new/,,,K,6,SHL Catalog
+Individual Test Solutions,Count Out The Money,https://www.shl.com/products/product-catalog/view/count-out-the-money/,,,"K
+S",6,SHL Catalog
+Individual Test Solutions,CSS3 (New),https://www.shl.com/products/product-catalog/view/css3-new/,,,K,6,SHL Catalog
+Individual Test Solutions,Culinary Skills (New),https://www.shl.com/products/product-catalog/view/culinary-skills-new/,,,K,6,SHL Catalog
+Individual Test Solutions,Customer Service Phone Simulation,https://www.shl.com/products/product-catalog/view/customer-service-phone-simulation/,,,"B
+S",6,SHL Catalog
+Individual Test Solutions,Customer Service Phone Solution,https://www.shl.com/products/product-catalog/view/customer-service-phone-solution/,,,"B
+P
+S",6,SHL Catalog
+Individual Test Solutions,Cyber Risk (New),https://www.shl.com/products/product-catalog/view/cyber-risk-new/,,,K,6,SHL Catalog
+Individual Test Solutions,Data Entry (New),https://www.shl.com/products/product-catalog/view/data-entry-new/,,,S,7,SHL Catalog
+Individual Test Solutions,Data Entry Alphanumeric Split Screen - US,https://www.shl.com/products/product-catalog/view/data-entry-alphanumeric-split-screen-us/,,,K,7,SHL Catalog
+Individual Test Solutions,Data Entry Numeric Split Screen - US,https://www.shl.com/products/product-catalog/view/data-entry-numeric-split-screen-us/,,,K,7,SHL Catalog
+Individual Test Solutions,Data Entry Ten Key Split Screen,https://www.shl.com/products/product-catalog/view/data-entry-ten-key-split-screen/,,,K,7,SHL Catalog
+Individual Test Solutions,Data Science (New),https://www.shl.com/products/product-catalog/view/data-science-new/,,,K,7,SHL Catalog
+Individual Test Solutions,Data Warehousing Concepts,https://www.shl.com/products/product-catalog/view/data-warehousing-concepts/,,,K,7,SHL Catalog
+Individual Test Solutions,Dependability and Safety Instrument (DSI),https://www.shl.com/products/product-catalog/view/dependability-and-safety-instrument-dsi/,,,P,7,SHL Catalog
+Individual Test Solutions,Dermatology (New),https://www.shl.com/products/product-catalog/view/dermatology-new/,,,K,7,SHL Catalog
+Individual Test Solutions,Desktop Support (New),https://www.shl.com/products/product-catalog/view/desktop-support-new/,,,K,7,SHL Catalog
+Individual Test Solutions,Digital Advertising (New),https://www.shl.com/products/product-catalog/view/digital-advertising-new/,,,K,7,SHL Catalog
+Individual Test Solutions,Digital Readiness Development Report - IC,https://www.shl.com/products/product-catalog/view/digital-readiness-development-report/,,,P,7,SHL Catalog
+Individual Test Solutions,Digital Readiness Development Report - Manager,https://www.shl.com/products/product-catalog/view/digital-readiness-development-report-manager/,,,P,7,SHL Catalog
+Individual Test Solutions,Docker (New),https://www.shl.com/products/product-catalog/view/docker-new/,,,K,8,SHL Catalog
+Individual Test Solutions,Dojo (New),https://www.shl.com/products/product-catalog/view/dojo-new/,,,K,8,SHL Catalog
+Individual Test Solutions,Drupal (New),https://www.shl.com/products/product-catalog/view/drupal-new/,,,K,8,SHL Catalog
+Individual Test Solutions,DSI v1.1 Interpretation Report,https://www.shl.com/products/product-catalog/view/dsi-v1-1-interpretation-report/,,,P,8,SHL Catalog
+Individual Test Solutions,Econometrics (New),https://www.shl.com/products/product-catalog/view/econometrics-new/,,,K,8,SHL Catalog
+Individual Test Solutions,Economics (New),https://www.shl.com/products/product-catalog/view/economics-new/,,,K,8,SHL Catalog
+Individual Test Solutions,Electrical and Electronics Engineering (New),https://www.shl.com/products/product-catalog/view/electrical-and-electronics-engineering-new/,,,K,8,SHL Catalog
+Individual Test Solutions,Electrical Engineering (New),https://www.shl.com/products/product-catalog/view/electrical-engineering-new/,,,K,8,SHL Catalog
+Individual Test Solutions,Electronics & Telecommunications Engineering (New),https://www.shl.com/products/product-catalog/view/electronics-and-telecommunications-engineering-new/,,,K,8,SHL Catalog
+Individual Test Solutions,Electronics and Embedded Systems Engineering (New),https://www.shl.com/products/product-catalog/view/electronics-and-embedded-systems-engineering-new/,,,K,8,SHL Catalog
+Individual Test Solutions,Electronics and Semiconductor Engineering (New),https://www.shl.com/products/product-catalog/view/electronics-and-semiconductor-engineering-new/,,,K,8,SHL Catalog
+Individual Test Solutions,English Comprehension (New),https://www.shl.com/products/product-catalog/view/english-comprehension-new/,,,K,8,SHL Catalog
+Individual Test Solutions,Enterprise Java Beans (New),https://www.shl.com/products/product-catalog/view/enterprise-java-beans-new/,,,K,9,SHL Catalog
+Individual Test Solutions,Enterprise Leadership Report 1.0,https://www.shl.com/products/product-catalog/view/enterprise-leadership-report/,,,P,9,SHL Catalog
+Individual Test Solutions,Enterprise Leadership Report 2.0,https://www.shl.com/products/product-catalog/view/enterprise-leadership-report-2-0/,,,P,9,SHL Catalog
+Individual Test Solutions,Entry Level Cashier Solution,https://www.shl.com/products/product-catalog/view/entry-level-cashier-solution/,,,"C
+P",9,SHL Catalog
+Individual Test Solutions,Entry Level Customer Serv-Retail & Contact Center,https://www.shl.com/products/product-catalog/view/entry-level-customer-serv-retail-and-contact-center/,,,"P
+C",9,SHL Catalog
+Individual Test Solutions,Entry Level Customer Service (General) Solution,https://www.shl.com/products/product-catalog/view/entry-level-customer-service-general-solution/,,,"C
+P",9,SHL Catalog
+Individual Test Solutions,Entry Level Hotel Front Desk Solution,https://www.shl.com/products/product-catalog/view/entry-level-hotel-front-desk-solution/,,,"C
+P",9,SHL Catalog
+Individual Test Solutions,Entry Level Sales Solution,https://www.shl.com/products/product-catalog/view/entry-level-sales-solution/,,,"C
+P",9,SHL Catalog
+Individual Test Solutions,Entry Level Technical Support Solution,https://www.shl.com/products/product-catalog/view/entry-level-technical-support-solution/,,,"P
+C",9,SHL Catalog
+Individual Test Solutions,ETL Testing (New),https://www.shl.com/products/product-catalog/view/etl-testing-new/,,,K,9,SHL Catalog
+Individual Test Solutions,Executive Scenarios,https://www.shl.com/products/product-catalog/view/executive-scenarios/,,,B,9,SHL Catalog
+Individual Test Solutions,Executive Scenarios Narrative Report,https://www.shl.com/products/product-catalog/view/executive-scenarios-narrative-report/,,,B,9,SHL Catalog
+Individual Test Solutions,Executive Scenarios Profile Report,https://www.shl.com/products/product-catalog/view/executive-scenarios-profile-report/,,,B,10,SHL Catalog
+Individual Test Solutions,ExpressJS (New),https://www.shl.com/products/product-catalog/view/expressjs-new/,,,K,10,SHL Catalog
+Individual Test Solutions,Filing - Names (R1),https://www.shl.com/products/product-catalog/view/filing-names-r1/,,,K,10,SHL Catalog
+Individual Test Solutions,Filing - Numbers,https://www.shl.com/products/product-catalog/view/filing-numbers/,,,K,10,SHL Catalog
+Individual Test Solutions,Financial Accounting (New),https://www.shl.com/products/product-catalog/view/financial-accounting-new/,,,K,10,SHL Catalog
+Individual Test Solutions,Financial and Banking Services (New),https://www.shl.com/products/product-catalog/view/financial-and-banking-services-new/,,,K,10,SHL Catalog
+Individual Test Solutions,Fire Engineering (New),https://www.shl.com/products/product-catalog/view/fire-engineering-new/,,,K,10,SHL Catalog
+Individual Test Solutions,Following Instructions v1 - UK (R1),https://www.shl.com/products/product-catalog/view/following-instructions-v1-uk-r1/,,,K,10,SHL Catalog
+Individual Test Solutions,Following Instructions v1 - US (R2),https://www.shl.com/products/product-catalog/view/following-instructions-v1-us-r2/,,,K,10,SHL Catalog
+Individual Test Solutions,Food and Beverage Services (New),https://www.shl.com/products/product-catalog/view/food-and-beverage-services-new/,,,K,10,SHL Catalog
+Individual Test Solutions,Food Science (New),https://www.shl.com/products/product-catalog/view/food-science-new/,,,K,10,SHL Catalog
+Individual Test Solutions,Front Office Management (New),https://www.shl.com/products/product-catalog/view/front-office-management-new/,,,K,10,SHL Catalog
+Individual Test Solutions,Fundamentals of Chemistry (New),https://www.shl.com/products/product-catalog/view/fundamentals-of-chemistry-new/,,,K,11,SHL Catalog
+Individual Test Solutions,Fundamentals of Physics (New),https://www.shl.com/products/product-catalog/view/fundamentals-of-physics-new/,,,K,11,SHL Catalog
+Individual Test Solutions,General Diseases (New),https://www.shl.com/products/product-catalog/view/general-diseases-new/,,,K,11,SHL Catalog
+Individual Test Solutions,Geoinformatics Engineering (New),https://www.shl.com/products/product-catalog/view/geoinformatics-engineering-new/,,,K,11,SHL Catalog
+Individual Test Solutions,Geoscience Engineering (New),https://www.shl.com/products/product-catalog/view/geoscience-engineering-new/,,,K,11,SHL Catalog
+Individual Test Solutions,GIT (New),https://www.shl.com/products/product-catalog/view/git-new/,,,K,11,SHL Catalog
+Individual Test Solutions,Global Skills Assessment,https://www.shl.com/products/product-catalog/view/global-skills-assessment/,,,"C
+K",11,SHL Catalog
+Individual Test Solutions,Graduate Scenarios,https://www.shl.com/products/product-catalog/view/graduate-scenarios/,,,B,11,SHL Catalog
+Individual Test Solutions,Graduate Scenarios Narrative Report,https://www.shl.com/products/product-catalog/view/graduate-scenarios-narrative-report/,,,B,11,SHL Catalog
+Individual Test Solutions,Graduate Scenarios Profile Report,https://www.shl.com/products/product-catalog/view/graduate-scenarios-profile-report/,,,B,11,SHL Catalog
+Individual Test Solutions,Hibernate (New),https://www.shl.com/products/product-catalog/view/hibernate-new/,,,K,11,SHL Catalog
+Individual Test Solutions,HIPAA (Security),https://www.shl.com/products/product-catalog/view/hipaa-security/,,,K,11,SHL Catalog
+Individual Test Solutions,HiPo Assessment Report 1.0,https://www.shl.com/products/product-catalog/view/hipo-assessment-report-1-0/,,,"C
+P",12,SHL Catalog
+Individual Test Solutions,HiPo Assessment Report 2.0,https://www.shl.com/products/product-catalog/view/hipo-assessment-report-2-0/,,,"C
+P",12,SHL Catalog
+Individual Test Solutions,HiPo Unlocking Potential Report 2.0,https://www.shl.com/products/product-catalog/view/hipo-unlocking-potential-report-2-0/,,,C,12,SHL Catalog
+Individual Test Solutions,Housekeeping (New),https://www.shl.com/products/product-catalog/view/housekeeping-new/,,,K,12,SHL Catalog
+Individual Test Solutions,HTML/CSS (New),https://www.shl.com/products/product-catalog/view/htmlcss-new/,,,K,12,SHL Catalog
+Individual Test Solutions,HTML5 (New),https://www.shl.com/products/product-catalog/view/html5-new/,,,K,12,SHL Catalog
+Individual Test Solutions,Human Resources (New),https://www.shl.com/products/product-catalog/view/human-resources-new/,,,K,12,SHL Catalog
+Individual Test Solutions,IBM DataStage (New),https://www.shl.com/products/product-catalog/view/ibm-datastage-new/,,,K,12,SHL Catalog
+Individual Test Solutions,IBM Sterling Order Management System (New),https://www.shl.com/products/product-catalog/view/ibm-sterling-order-management-system-new/,,,K,12,SHL Catalog
+Individual Test Solutions,Industrial Engineering (New),https://www.shl.com/products/product-catalog/view/industrial-engineering-new/,,,K,12,SHL Catalog
+Individual Test Solutions,Informatica (Architecture) (New),https://www.shl.com/products/product-catalog/view/informatica-architecture-new/,,,K,12,SHL Catalog
+Individual Test Solutions,Informatica (Developer) (New),https://www.shl.com/products/product-catalog/view/informatica-developer-new/,,,K,12,SHL Catalog
+Individual Test Solutions,Instrumentation Engineering (New),https://www.shl.com/products/product-catalog/view/instrumentation-engineering-new/,,,K,13,SHL Catalog
+Individual Test Solutions,Interpersonal Communications,https://www.shl.com/products/product-catalog/view/interpersonal-communications/,,,K,13,SHL Catalog
+Individual Test Solutions,Interviewing and Hiring Concepts (U.S.),https://www.shl.com/products/product-catalog/view/interviewing-and-hiring-concepts-u-s/,,,K,13,SHL Catalog
+Individual Test Solutions,iOS Development (New),https://www.shl.com/products/product-catalog/view/ios-development-new/,,,K,13,SHL Catalog
+Individual Test Solutions,ITIL (IT Infrastructure Library) (New),https://www.shl.com/products/product-catalog/view/itil-it-infrastructure-library-new/,,,K,13,SHL Catalog
+Individual Test Solutions,Java 2 Platform Enterprise Edition 1.4 Fundamental,https://www.shl.com/products/product-catalog/view/java-2-platform-enterprise-edition-1-4-fundamental/,,,K,13,SHL Catalog
+Individual Test Solutions,Java 8 (New),https://www.shl.com/products/product-catalog/view/java-8-new/,,,K,13,SHL Catalog
+Individual Test Solutions,Java Design Patterns (New),https://www.shl.com/products/product-catalog/view/java-design-patterns-new/,,,K,13,SHL Catalog
+Individual Test Solutions,Java Frameworks (New),https://www.shl.com/products/product-catalog/view/java-frameworks-new/,,,K,13,SHL Catalog
+Individual Test Solutions,Java Platform Enterprise Edition 7 (Java EE 7),https://www.shl.com/products/product-catalog/view/java-platform-enterprise-edition-7-java-ee-7/,,,K,13,SHL Catalog
+Individual Test Solutions,Java Web Services (New),https://www.shl.com/products/product-catalog/view/java-web-services-new/,,,K,13,SHL Catalog
+Individual Test Solutions,JavaScript (New),https://www.shl.com/products/product-catalog/view/javascript-new/,,,K,13,SHL Catalog
+Individual Test Solutions,Jenkins (New),https://www.shl.com/products/product-catalog/view/jenkins-new/,,,K,14,SHL Catalog
+Individual Test Solutions,Job Control Language (New),https://www.shl.com/products/product-catalog/view/job-control-language-new/,,,K,14,SHL Catalog
+Individual Test Solutions,jQuery (New),https://www.shl.com/products/product-catalog/view/jquery-new/,,,K,14,SHL Catalog
+Individual Test Solutions,Kubernetes (New),https://www.shl.com/products/product-catalog/view/kubernetes-new/,,,K,14,SHL Catalog
+Individual Test Solutions,Linux Administration (New),https://www.shl.com/products/product-catalog/view/linux-administration-new/,,,K,14,SHL Catalog
+Individual Test Solutions,Linux Operating System,https://www.shl.com/products/product-catalog/view/linux-operating-system/,,,K,14,SHL Catalog
+Individual Test Solutions,Linux Programming (General),https://www.shl.com/products/product-catalog/view/linux-programming-general/,,,K,14,SHL Catalog
+Individual Test Solutions,Load Runner (New),https://www.shl.com/products/product-catalog/view/load-runner-new/,,,K,14,SHL Catalog
+Individual Test Solutions,Management Scenarios,https://www.shl.com/products/product-catalog/view/management-scenarios/,,,B,14,SHL Catalog
+Individual Test Solutions,Managerial Scenarios Candidate Report,https://www.shl.com/products/product-catalog/view/managerial-scenarios-candidate-report/,,,B,14,SHL Catalog
+Individual Test Solutions,Managerial Scenarios Narrative Report,https://www.shl.com/products/product-catalog/view/managerial-scenarios-narrative-report/,,,B,14,SHL Catalog
+Individual Test Solutions,Managerial Scenarios Profile Report,https://www.shl.com/products/product-catalog/view/managerial-scenarios-profile-report/,,,B,14,SHL Catalog
+Individual Test Solutions,Manual Testing (New),https://www.shl.com/products/product-catalog/view/manual-testing-new/,,,K,15,SHL Catalog
+Individual Test Solutions,Manufac. & Indust. - Mechanical & Vigilance 8.0,https://www.shl.com/products/product-catalog/view/mechanical-and-vigilance-focus-8-0/,,,"A
+P",15,SHL Catalog
+Individual Test Solutions,Manufac. & Indust. - Safety & Dependability 8.0,https://www.shl.com/products/product-catalog/view/safety-and-dependability-focus-8-0/,,,P,15,SHL Catalog
+Individual Test Solutions,Manufacturing & Industrial - Essential Focus 8.0,https://www.shl.com/products/product-catalog/view/essential-focus-8-0/,,,P,15,SHL Catalog
+Individual Test Solutions,Manufacturing & Industrial - Mechanical Focus 8.0,https://www.shl.com/products/product-catalog/view/mechanical-focus-8-0/,,,"A
+P",15,SHL Catalog
+Individual Test Solutions,Manufacturing & Industrial - Vigilance Focus 8.0,https://www.shl.com/products/product-catalog/view/vigilance-focus-8-0/,,,"A
+P",15,SHL Catalog
+Individual Test Solutions,Marketing (New),https://www.shl.com/products/product-catalog/view/marketing-new/,,,K,15,SHL Catalog
+Individual Test Solutions,Maven (New),https://www.shl.com/products/product-catalog/view/maven-new/,,,K,15,SHL Catalog
+Individual Test Solutions,Mechanical Engineering (New),https://www.shl.com/products/product-catalog/view/mechanical-engineering-new/,,,K,15,SHL Catalog
+Individual Test Solutions,Mechatronics Engineering (New),https://www.shl.com/products/product-catalog/view/mechatronics-engineering-new/,,,K,15,SHL Catalog
+Individual Test Solutions,Medical Terminology (New),https://www.shl.com/products/product-catalog/view/medical-terminology-new/,,,K,15,SHL Catalog
+Individual Test Solutions,Metallurgical Engineering (New),https://www.shl.com/products/product-catalog/view/metallurgical-engineering-new/,,,K,15,SHL Catalog
+Individual Test Solutions,MFS 360 Enterprise Leadership Report,https://www.shl.com/products/product-catalog/view/mfs-360-enterprise-leadership-report/,,,D,16,SHL Catalog
+Individual Test Solutions,MFS 360 UCF Group Report,https://www.shl.com/products/product-catalog/view/mfs-360-ucf-group-report/,,,D,16,SHL Catalog
+Individual Test Solutions,MFS 360 UCF Performance Potential Dev Tips Report,https://www.shl.com/products/product-catalog/view/mfs-360-ucf-performance-potential-dev-tips-report/,,,D,16,SHL Catalog
+Individual Test Solutions,MFS 360 UCF Standard Report,https://www.shl.com/products/product-catalog/view/mfs-360-ucf-standard-report/,,,D,16,SHL Catalog
+Individual Test Solutions,Micro Focus Unified Functional Testing (New),https://www.shl.com/products/product-catalog/view/micro-focus-unified-functional-testing-new/,,,K,16,SHL Catalog
+Individual Test Solutions,Microservices (New),https://www.shl.com/products/product-catalog/view/microservices-new/,,,K,16,SHL Catalog
+Individual Test Solutions,Microsoft Dynamics Development (New),https://www.shl.com/products/product-catalog/view/microsoft-dynamics-development-new/,,,K,16,SHL Catalog
+Individual Test Solutions,Microsoft Excel 365 - Essentials (New),https://www.shl.com/products/product-catalog/view/microsoft-excel-365-essentials-new/,,,"K
+S",16,SHL Catalog
+Individual Test Solutions,Microsoft Excel 365 (New),https://www.shl.com/products/product-catalog/view/microsoft-excel-365-new/,,,"K
+S",16,SHL Catalog
+Individual Test Solutions,Microsoft Outlook 2013 (adaptive),https://www.shl.com/products/product-catalog/view/microsoft-outlook-2013-adaptive/,,,K,16,SHL Catalog
+Individual Test Solutions,Microsoft PowerPoint 365 - Essentials (New),https://www.shl.com/products/product-catalog/view/microsoft-powerpoint-365-essentials-new/,,,"K
+S",16,SHL Catalog
+Individual Test Solutions,Microsoft SQL Server 2014 Programming,https://www.shl.com/products/product-catalog/view/microsoft-sql-server-2014-programming/,,,K,16,SHL Catalog
+Individual Test Solutions,Microsoft Windows Server 2012 Administration,https://www.shl.com/products/product-catalog/view/microsoft-windows-server-2012-administration/,,,K,17,SHL Catalog
+Individual Test Solutions,Microsoft Word 365 - Essentials (New),https://www.shl.com/products/product-catalog/view/microsoft-word-365-essentials-new/,,,"K
+S",17,SHL Catalog
+Individual Test Solutions,Microsoft Word 365 (New),https://www.shl.com/products/product-catalog/view/microsoft-word-365-new/,,,"S
+K",17,SHL Catalog
+Individual Test Solutions,Mineral Engineering (New),https://www.shl.com/products/product-catalog/view/mineral-engineering-new/,,,K,17,SHL Catalog
+Individual Test Solutions,Mining Engineering (New),https://www.shl.com/products/product-catalog/view/mining-engineering-new/,,,K,17,SHL Catalog
+Individual Test Solutions,Mobility (New),https://www.shl.com/products/product-catalog/view/mobility-new/,,,K,17,SHL Catalog
+Individual Test Solutions,Molecular Biology (New),https://www.shl.com/products/product-catalog/view/molecular-biology-new/,,,K,17,SHL Catalog
+Individual Test Solutions,MongoDB (New),https://www.shl.com/products/product-catalog/view/mongodb-new/,,,K,17,SHL Catalog
+Individual Test Solutions,Motivation Questionnaire MQM5,https://www.shl.com/products/product-catalog/view/motivation-questionnaire-mqm5/,,,P,17,SHL Catalog
+Individual Test Solutions,MQ Candidate Motivation Report,https://www.shl.com/products/product-catalog/view/mq-candidate-motivation-report/,,,P,17,SHL Catalog
+Individual Test Solutions,MQ Employee Motivation Report,https://www.shl.com/products/product-catalog/view/mq-employee-motivation-report/,,,P,17,SHL Catalog
+Individual Test Solutions,MQ Motivation Report Pack,https://www.shl.com/products/product-catalog/view/mq-motivation-report-pack/,,,P,17,SHL Catalog
+Individual Test Solutions,Global Skills Development Report,https://www.shl.com/products/product-catalog/view/global-skills-development-report/,,,"A
+E
+B
+C
+D
+P",18,SHL Catalog
+Individual Test Solutions,.NET Framework 4.5,https://www.shl.com/products/product-catalog/view/net-framework-4-5/,,,K,18,SHL Catalog
+Individual Test Solutions,.NET MVC (New),https://www.shl.com/products/product-catalog/view/net-mvc-new/,,,K,18,SHL Catalog
+Individual Test Solutions,.NET MVVM (New),https://www.shl.com/products/product-catalog/view/net-mvvm-new/,,,K,18,SHL Catalog
+Individual Test Solutions,.NET WCF (New),https://www.shl.com/products/product-catalog/view/net-wcf-new/,,,K,18,SHL Catalog
+Individual Test Solutions,.NET WPF (New),https://www.shl.com/products/product-catalog/view/net-wpf-new/,,,K,18,SHL Catalog
+Individual Test Solutions,.NET XAML (New),https://www.shl.com/products/product-catalog/view/net-xaml-new/,,,K,18,SHL Catalog
+Individual Test Solutions,Accounts Payable (New),https://www.shl.com/products/product-catalog/view/accounts-payable-new/,,,K,18,SHL Catalog
+Individual Test Solutions,Accounts Payable Simulation (New),https://www.shl.com/products/product-catalog/view/accounts-payable-simulation-new/,,,S,18,SHL Catalog
+Individual Test Solutions,Accounts Receivable (New),https://www.shl.com/products/product-catalog/view/accounts-receivable-new/,,,K,18,SHL Catalog
+Individual Test Solutions,Accounts Receivable Simulation (New),https://www.shl.com/products/product-catalog/view/accounts-receivable-simulation-new/,,,S,18,SHL Catalog
+Individual Test Solutions,ADO.NET (New),https://www.shl.com/products/product-catalog/view/ado-net-new/,,,K,18,SHL Catalog
+Individual Test Solutions,Adobe Experience Manager (New),https://www.shl.com/products/product-catalog/view/adobe-experience-manager-new/,,,K,19,SHL Catalog
+Individual Test Solutions,Adobe Photoshop CC,https://www.shl.com/products/product-catalog/view/adobe-photoshop-cc/,,,K,19,SHL Catalog
+Individual Test Solutions,Aeronautical Engineering (New),https://www.shl.com/products/product-catalog/view/aeronautical-engineering-new/,,,K,19,SHL Catalog
+Individual Test Solutions,Aerospace Engineering (New),https://www.shl.com/products/product-catalog/view/aerospace-engineering-new/,,,K,19,SHL Catalog
+Individual Test Solutions,Agile Software Development,https://www.shl.com/products/product-catalog/view/agile-software-development/,,,K,19,SHL Catalog
+Individual Test Solutions,Agile Testing (New),https://www.shl.com/products/product-catalog/view/agile-testing-new/,,,K,19,SHL Catalog
+Individual Test Solutions,AI Skills,https://www.shl.com/products/product-catalog/view/ai-skills/,,,P,19,SHL Catalog
+Individual Test Solutions,Amazon Web Services (AWS) Development (New),https://www.shl.com/products/product-catalog/view/amazon-web-services-aws-development-new/,,,K,19,SHL Catalog
+Individual Test Solutions,Android Development (New),https://www.shl.com/products/product-catalog/view/android-development-new/,,,K,19,SHL Catalog
+Individual Test Solutions,Angular 6 (New),https://www.shl.com/products/product-catalog/view/angular-6-new/,,,K,19,SHL Catalog
+Individual Test Solutions,AngularJS (New),https://www.shl.com/products/product-catalog/view/angularjs-new/,,,K,19,SHL Catalog
+Individual Test Solutions,Apache Hadoop (New),https://www.shl.com/products/product-catalog/view/apache-hadoop-new/,,,K,19,SHL Catalog
+Individual Test Solutions,Apache Hadoop Extensions (New),https://www.shl.com/products/product-catalog/view/apache-hadoop-extensions-new/,,,K,20,SHL Catalog
+Individual Test Solutions,Apache HBase (New),https://www.shl.com/products/product-catalog/view/apache-hbase-new/,,,K,20,SHL Catalog
+Individual Test Solutions,Apache Hive (New),https://www.shl.com/products/product-catalog/view/apache-hive-new/,,,K,20,SHL Catalog
+Individual Test Solutions,Apache Kafka (New),https://www.shl.com/products/product-catalog/view/apache-kafka-new/,,,K,20,SHL Catalog
+Individual Test Solutions,Apache Pig (New),https://www.shl.com/products/product-catalog/view/apache-pig-new/,,,K,20,SHL Catalog
+Individual Test Solutions,Apache Spark (New),https://www.shl.com/products/product-catalog/view/apache-spark-new/,,,K,20,SHL Catalog
+Individual Test Solutions,ASP .NET with C# (New),https://www.shl.com/products/product-catalog/view/asp-net-with-c-new/,,,K,20,SHL Catalog
+Individual Test Solutions,ASP.NET 4.5,https://www.shl.com/products/product-catalog/view/asp-net-4-5/,,,K,20,SHL Catalog
+Individual Test Solutions,Assessment and Development Center Exercises,https://www.shl.com/products/product-catalog/view/assessment-and-development-center-exercises/,,,E,20,SHL Catalog
+Individual Test Solutions,Automata - Fix (New),https://www.shl.com/products/product-catalog/view/automata-fix-new/,,,S,20,SHL Catalog
+Individual Test Solutions,Automata - SQL (New),https://www.shl.com/products/product-catalog/view/automata-sql-new/,,,S,20,SHL Catalog
+Individual Test Solutions,Automata (New),https://www.shl.com/products/product-catalog/view/automata-new/,,,S,20,SHL Catalog
+Individual Test Solutions,Automata Data Science (New),https://www.shl.com/products/product-catalog/view/automata-data-science-new/,,,S,21,SHL Catalog
+Individual Test Solutions,Automata Data Science Pro (New),https://www.shl.com/products/product-catalog/view/automata-data-science-pro-new/,,,S,21,SHL Catalog
+Individual Test Solutions,Automata Front End,https://www.shl.com/products/product-catalog/view/automata-front-end/,,,S,21,SHL Catalog
+Individual Test Solutions,Automata Pro (New),https://www.shl.com/products/product-catalog/view/automata-pro-new/,,,S,21,SHL Catalog
+Individual Test Solutions,Automata Selenium,https://www.shl.com/products/product-catalog/view/automata-selenium/,,,S,21,SHL Catalog
+Individual Test Solutions,Automation Anywhere RPA Development (New),https://www.shl.com/products/product-catalog/view/automation-anywhere-rpa-development-new/,,,K,21,SHL Catalog
+Individual Test Solutions,Automotive Engineering (New),https://www.shl.com/products/product-catalog/view/automotive-engineering-new/,,,K,21,SHL Catalog
+Individual Test Solutions,Basic Biology (New),https://www.shl.com/products/product-catalog/view/basic-biology-new/,,,K,21,SHL Catalog
+Individual Test Solutions,Basic Computer Literacy (Windows 10) (New),https://www.shl.com/products/product-catalog/view/basic-computer-literacy-windows-10-new/,,,"S
+K",21,SHL Catalog
+Individual Test Solutions,Basic Statistics (New),https://www.shl.com/products/product-catalog/view/basic-statistics-new/,,,K,21,SHL Catalog
+Individual Test Solutions,Biochemistry (New),https://www.shl.com/products/product-catalog/view/biochemistry-new/,,,K,21,SHL Catalog
+Individual Test Solutions,Biotech Lab Techniques (New),https://www.shl.com/products/product-catalog/view/biotech-lab-techniques-new/,,,K,21,SHL Catalog
+Individual Test Solutions,BizTalk (New),https://www.shl.com/products/product-catalog/view/biztalk-new/,,,K,22,SHL Catalog
+Individual Test Solutions,Business Communication (adaptive),https://www.shl.com/products/product-catalog/view/business-communication-adaptive/,,,K,22,SHL Catalog
+Individual Test Solutions,Business Communications,https://www.shl.com/products/product-catalog/view/business-communications/,,,K,22,SHL Catalog
+Individual Test Solutions,C Programming (New),https://www.shl.com/products/product-catalog/view/c-programming-new/,,,K,22,SHL Catalog
+Individual Test Solutions,C# Programming (New),https://www.shl.com/products/product-catalog/view/c-programming-new-4039/,,,K,22,SHL Catalog
+Individual Test Solutions,C++ Programming (New),https://www.shl.com/products/product-catalog/view/c-programming-new-4122/,,,K,22,SHL Catalog
+Individual Test Solutions,Cardiology and Diabetes Management (New),https://www.shl.com/products/product-catalog/view/cardiology-and-diabetes-management-new/,,,K,22,SHL Catalog
+Individual Test Solutions,Ceramic Engineering (New),https://www.shl.com/products/product-catalog/view/ceramic-engineering-new/,,,K,22,SHL Catalog
+Individual Test Solutions,Chemical Engineering (New),https://www.shl.com/products/product-catalog/view/chemical-engineering-new/,,,K,22,SHL Catalog
+Individual Test Solutions,Cisco AppDynamics (New),https://www.shl.com/products/product-catalog/view/cisco-appdynamics-new/,,,K,22,SHL Catalog
+Individual Test Solutions,Civil Engineering (New),https://www.shl.com/products/product-catalog/view/civil-engineering-new/,,,K,22,SHL Catalog
+Individual Test Solutions,Cloud Computing (New),https://www.shl.com/products/product-catalog/view/cloud-computing-new/,,,K,22,SHL Catalog
+Individual Test Solutions,COBOL Programming (New),https://www.shl.com/products/product-catalog/view/cobol-programming-new/,,,K,23,SHL Catalog
+Individual Test Solutions,Computer Science (New),https://www.shl.com/products/product-catalog/view/computer-science-new/,,,K,23,SHL Catalog
+Individual Test Solutions,Contact Center Call Simulation (New),https://www.shl.com/products/product-catalog/view/contact-center-call-simulation-new/,,,S,23,SHL Catalog
+Individual Test Solutions,Conversational Multichat Simulation,https://www.shl.com/products/product-catalog/view/conversational-multichat-simulation/,,,S,23,SHL Catalog
+Individual Test Solutions,Core Java (Advanced Level) (New),https://www.shl.com/products/product-catalog/view/core-java-advanced-level-new/,,,K,23,SHL Catalog
+Individual Test Solutions,Core Java (Entry Level) (New),https://www.shl.com/products/product-catalog/view/core-java-entry-level-new/,,,K,23,SHL Catalog
+Individual Test Solutions,Count Out The Money,https://www.shl.com/products/product-catalog/view/count-out-the-money/,,,"K
+S",23,SHL Catalog
+Individual Test Solutions,CSS3 (New),https://www.shl.com/products/product-catalog/view/css3-new/,,,K,23,SHL Catalog
+Individual Test Solutions,Culinary Skills (New),https://www.shl.com/products/product-catalog/view/culinary-skills-new/,,,K,23,SHL Catalog
+Individual Test Solutions,Customer Service Phone Simulation,https://www.shl.com/products/product-catalog/view/customer-service-phone-simulation/,,,"B
+S",23,SHL Catalog
+Individual Test Solutions,Customer Service Phone Solution,https://www.shl.com/products/product-catalog/view/customer-service-phone-solution/,,,"B
+P
+S",23,SHL Catalog
+Individual Test Solutions,Cyber Risk (New),https://www.shl.com/products/product-catalog/view/cyber-risk-new/,,,K,23,SHL Catalog
+Individual Test Solutions,Data Entry (New),https://www.shl.com/products/product-catalog/view/data-entry-new/,,,S,24,SHL Catalog
+Individual Test Solutions,Data Entry Alphanumeric Split Screen - US,https://www.shl.com/products/product-catalog/view/data-entry-alphanumeric-split-screen-us/,,,K,24,SHL Catalog
+Individual Test Solutions,Data Entry Numeric Split Screen - US,https://www.shl.com/products/product-catalog/view/data-entry-numeric-split-screen-us/,,,K,24,SHL Catalog
+Individual Test Solutions,Data Entry Ten Key Split Screen,https://www.shl.com/products/product-catalog/view/data-entry-ten-key-split-screen/,,,K,24,SHL Catalog
+Individual Test Solutions,Data Science (New),https://www.shl.com/products/product-catalog/view/data-science-new/,,,K,24,SHL Catalog
+Individual Test Solutions,Data Warehousing Concepts,https://www.shl.com/products/product-catalog/view/data-warehousing-concepts/,,,K,24,SHL Catalog
+Individual Test Solutions,Dependability and Safety Instrument (DSI),https://www.shl.com/products/product-catalog/view/dependability-and-safety-instrument-dsi/,,,P,24,SHL Catalog
+Individual Test Solutions,Dermatology (New),https://www.shl.com/products/product-catalog/view/dermatology-new/,,,K,24,SHL Catalog
+Individual Test Solutions,Desktop Support (New),https://www.shl.com/products/product-catalog/view/desktop-support-new/,,,K,24,SHL Catalog
+Individual Test Solutions,Digital Advertising (New),https://www.shl.com/products/product-catalog/view/digital-advertising-new/,,,K,24,SHL Catalog
+Individual Test Solutions,Digital Readiness Development Report - IC,https://www.shl.com/products/product-catalog/view/digital-readiness-development-report/,,,P,24,SHL Catalog
+Individual Test Solutions,Digital Readiness Development Report - Manager,https://www.shl.com/products/product-catalog/view/digital-readiness-development-report-manager/,,,P,24,SHL Catalog
+Individual Test Solutions,Docker (New),https://www.shl.com/products/product-catalog/view/docker-new/,,,K,25,SHL Catalog
+Individual Test Solutions,Dojo (New),https://www.shl.com/products/product-catalog/view/dojo-new/,,,K,25,SHL Catalog
+Individual Test Solutions,Drupal (New),https://www.shl.com/products/product-catalog/view/drupal-new/,,,K,25,SHL Catalog
+Individual Test Solutions,DSI v1.1 Interpretation Report,https://www.shl.com/products/product-catalog/view/dsi-v1-1-interpretation-report/,,,P,25,SHL Catalog
+Individual Test Solutions,Econometrics (New),https://www.shl.com/products/product-catalog/view/econometrics-new/,,,K,25,SHL Catalog
+Individual Test Solutions,Economics (New),https://www.shl.com/products/product-catalog/view/economics-new/,,,K,25,SHL Catalog
+Individual Test Solutions,Electrical and Electronics Engineering (New),https://www.shl.com/products/product-catalog/view/electrical-and-electronics-engineering-new/,,,K,25,SHL Catalog
+Individual Test Solutions,Electrical Engineering (New),https://www.shl.com/products/product-catalog/view/electrical-engineering-new/,,,K,25,SHL Catalog
+Individual Test Solutions,Electronics & Telecommunications Engineering (New),https://www.shl.com/products/product-catalog/view/electronics-and-telecommunications-engineering-new/,,,K,25,SHL Catalog
+Individual Test Solutions,Electronics and Embedded Systems Engineering (New),https://www.shl.com/products/product-catalog/view/electronics-and-embedded-systems-engineering-new/,,,K,25,SHL Catalog
+Individual Test Solutions,Electronics and Semiconductor Engineering (New),https://www.shl.com/products/product-catalog/view/electronics-and-semiconductor-engineering-new/,,,K,25,SHL Catalog
+Individual Test Solutions,English Comprehension (New),https://www.shl.com/products/product-catalog/view/english-comprehension-new/,,,K,25,SHL Catalog
+Individual Test Solutions,Enterprise Java Beans (New),https://www.shl.com/products/product-catalog/view/enterprise-java-beans-new/,,,K,26,SHL Catalog
+Individual Test Solutions,Enterprise Leadership Report 1.0,https://www.shl.com/products/product-catalog/view/enterprise-leadership-report/,,,P,26,SHL Catalog
+Individual Test Solutions,Enterprise Leadership Report 2.0,https://www.shl.com/products/product-catalog/view/enterprise-leadership-report-2-0/,,,P,26,SHL Catalog
+Individual Test Solutions,Entry Level Cashier Solution,https://www.shl.com/products/product-catalog/view/entry-level-cashier-solution/,,,"C
+P",26,SHL Catalog
+Individual Test Solutions,Entry Level Customer Serv-Retail & Contact Center,https://www.shl.com/products/product-catalog/view/entry-level-customer-serv-retail-and-contact-center/,,,"P
+C",26,SHL Catalog
+Individual Test Solutions,Entry Level Customer Service (General) Solution,https://www.shl.com/products/product-catalog/view/entry-level-customer-service-general-solution/,,,"C
+P",26,SHL Catalog
+Individual Test Solutions,Entry Level Hotel Front Desk Solution,https://www.shl.com/products/product-catalog/view/entry-level-hotel-front-desk-solution/,,,"C
+P",26,SHL Catalog
+Individual Test Solutions,Entry Level Sales Solution,https://www.shl.com/products/product-catalog/view/entry-level-sales-solution/,,,"C
+P",26,SHL Catalog
+Individual Test Solutions,Entry Level Technical Support Solution,https://www.shl.com/products/product-catalog/view/entry-level-technical-support-solution/,,,"P
+C",26,SHL Catalog
+Individual Test Solutions,ETL Testing (New),https://www.shl.com/products/product-catalog/view/etl-testing-new/,,,K,26,SHL Catalog
+Individual Test Solutions,Executive Scenarios,https://www.shl.com/products/product-catalog/view/executive-scenarios/,,,B,26,SHL Catalog
+Individual Test Solutions,Executive Scenarios Narrative Report,https://www.shl.com/products/product-catalog/view/executive-scenarios-narrative-report/,,,B,26,SHL Catalog
+Individual Test Solutions,District/Regional Manager Solution,https://www.shl.com/products/product-catalog/view/districtregional-manager-solution/,,,"A
+B
+P",27,SHL Catalog
+Individual Test Solutions,Entry Level Cashier 7.1 (Americas),https://www.shl.com/products/product-catalog/view/entry-level-cashier-7-1-%28americas%29/,,,"B
+P
+A",27,SHL Catalog
+Individual Test Solutions,Entry Level Cashier 7.1 (International),https://www.shl.com/products/product-catalog/view/entry-level-cashier-7-1-%28international%29/,,,"A
+B
+P",27,SHL Catalog
+Individual Test Solutions,Entry Level Customer Service 7.1 (Americas),https://www.shl.com/products/product-catalog/view/entry-level-customer-service-7-1-%28americas%29/,,,"C
+P",27,SHL Catalog
+Individual Test Solutions,Entry Level Customer Service 7.1 (International),https://www.shl.com/products/product-catalog/view/entry-level-customer-service-%28retail-and-cc%29-7-1/,,,"C
+P",27,SHL Catalog
+Individual Test Solutions,Entry Level Customer Service 7.1 (South Africa),https://www.shl.com/products/product-catalog/view/entry-level-customer-service-7-1-%28south-africa%29/,,,"C
+P",27,SHL Catalog
+Individual Test Solutions,Entry level Sales 7.1 (Americas),https://www.shl.com/products/product-catalog/view/entry-level-sales-7-1-%28americas%29/,,,"B
+C
+P",27,SHL Catalog
+Individual Test Solutions,Entry level Sales 7.1 (International),https://www.shl.com/products/product-catalog/view/entry-level-sales-7-1/,,,"P
+B
+C",27,SHL Catalog
+Individual Test Solutions,Entry Level Sales Sift Out 7.1,https://www.shl.com/products/product-catalog/view/entry-level-sales-sift-out-7-1/,,,"C
+P
+B",27,SHL Catalog
+Individual Test Solutions,Event Sales Manager Solution,https://www.shl.com/products/product-catalog/view/event-sales-manager-solution/,,,"S
+A
+B
+P",27,SHL Catalog
+Individual Test Solutions,Executive - Short Form,https://www.shl.com/products/product-catalog/view/executive-short-form/,,,"A
+B
+P",27,SHL Catalog
+Individual Test Solutions,Financial Professional - Short Form,https://www.shl.com/products/product-catalog/view/financial-professional-short-form/,,,"A
+B
+P",27,SHL Catalog
+Individual Test Solutions,Financial Services Representative Solution,https://www.shl.com/products/product-catalog/view/financial-services-representative-solution/,,,"A
+B
+P",28,SHL Catalog
+Individual Test Solutions,Front Desk Associate Solution,https://www.shl.com/products/product-catalog/view/front-desk-associate-solution/,,,"A
+B
+P",28,SHL Catalog
+Individual Test Solutions,Gaming Associate Solution,https://www.shl.com/products/product-catalog/view/gaming-associate-solution/,,,"A
+B
+P
+S",28,SHL Catalog
+Individual Test Solutions,Gaming Manager Solution,https://www.shl.com/products/product-catalog/view/gaming-manager-solution/,,,"S
+A
+B
+K
+P",28,SHL Catalog
+Individual Test Solutions,General Entry Level - All Industries 7.0 Solution,https://www.shl.com/products/product-catalog/view/general-entry-level-all-industries-7-0-solution/,,,B,28,SHL Catalog
+Individual Test Solutions,General Entry Level - All Industries 7.1 Solution,https://www.shl.com/products/product-catalog/view/general-entry-level-all-industries-7-1-solution/,,,B,28,SHL Catalog
+Individual Test Solutions,General Entry Level - All Industries 7.1(Americas),https://www.shl.com/products/product-catalog/view/general-entry-level-all-industries-7-1%28americas%29/,,,B,28,SHL Catalog
+Individual Test Solutions,General Entry Level – Data Entry 7.0 Solution,https://www.shl.com/products/product-catalog/view/general-entry-level-data-entry-7-0-solution/,,,"B
+K",28,SHL Catalog
+Individual Test Solutions,Graduate + 8.0 Job Focused Assessment,https://www.shl.com/products/product-catalog/view/graduate-8-0-job-focused-assessment/,,,"A
+B
+P",28,SHL Catalog
+Individual Test Solutions,Graduate 7.1 Job Focused Assessment,https://www.shl.com/products/product-catalog/view/graduate-7-1-job-focused-assessment/,,,"B
+C",28,SHL Catalog
+Individual Test Solutions,Graduate 8.0 Job Focused Assessment,https://www.shl.com/products/product-catalog/view/graduate-8-0-job-focused-assessment-4228/,,,"P
+B",28,SHL Catalog
+Individual Test Solutions,Guest Service Team 7.0 Solution,https://www.shl.com/products/product-catalog/view/guest-service-team-7-0-solution/,,,B,28,SHL Catalog
+Individual Test Solutions,Guest Services Associate Solution,https://www.shl.com/products/product-catalog/view/guest-services-associate-solution/,,,"A
+B
+P
+S",29,SHL Catalog
+Individual Test Solutions,Healthcare Aide 7.0 Solution,https://www.shl.com/products/product-catalog/view/healthcare-aide-7-0-solution/,,,B,29,SHL Catalog
+Individual Test Solutions,Healthcare Call Center Agent Solution,https://www.shl.com/products/product-catalog/view/healthcare-call-center-agent-solution/,,,"A
+B
+P
+S",29,SHL Catalog
+Individual Test Solutions,Healthcare Service Associate Solution,https://www.shl.com/products/product-catalog/view/healthcare-service-associate-solution/,,,"A
+B
+P",29,SHL Catalog
+Individual Test Solutions,Healthcare Support Specialist Solution,https://www.shl.com/products/product-catalog/view/healthcare-support-specialist-solution/,,,"A
+B
+P",29,SHL Catalog
+Individual Test Solutions,Home Health Aide Solution,https://www.shl.com/products/product-catalog/view/home-health-aide-solution/,,,"A
+B
+P",29,SHL Catalog
+Individual Test Solutions,Hospitality Manager Solution,https://www.shl.com/products/product-catalog/view/hospitality-manager-solution/,,,"A
+B
+K
+P",29,SHL Catalog
+Individual Test Solutions,Host Solution,https://www.shl.com/products/product-catalog/view/host-solution/,,,"B
+P",29,SHL Catalog
+Individual Test Solutions,Industrial - Entry Level 7.0 Solution,https://www.shl.com/products/product-catalog/view/industrial-entry-level-7-0-solution/,,,B,29,SHL Catalog
+Individual Test Solutions,Industrial - Entry Level 7.1 (Americas),https://www.shl.com/products/product-catalog/view/industrial-entry-level-7-1-%28americas%29/,,,B,29,SHL Catalog
+Individual Test Solutions,Industrial - Entry Level 7.1 (International),https://www.shl.com/products/product-catalog/view/industrial-entry-level-7-1-%28international%29/,,,B,29,SHL Catalog
+Individual Test Solutions,Industrial - Professional and Skilled 7.0 Solution,https://www.shl.com/products/product-catalog/view/industrial-professional-and-skilled-7-0-solution/,,,"A
+B",29,SHL Catalog
+Individual Test Solutions,Industrial - Semi-skilled 7.1 (Americas),https://www.shl.com/products/product-catalog/view/industrial-semi-skilled-7-1-%28americas%29/,,,B,30,SHL Catalog
+Individual Test Solutions,Industrial - Semi-skilled 7.1 (International),https://www.shl.com/products/product-catalog/view/industrial-semi-skilled-7-1-%28international%29/,,,B,30,SHL Catalog
+Individual Test Solutions,Industrial Professional and Skilled 7.1 (Americas),https://www.shl.com/products/product-catalog/view/industrial-professional-and-skilled-7-1-%28americas%29/,,,"A
+B",30,SHL Catalog
+Individual Test Solutions,Industrial Professional and Skilled 7.1 Solution,https://www.shl.com/products/product-catalog/view/industrial-professional-and-skilled-7-1-solution/,,,"A
+B",30,SHL Catalog
+Individual Test Solutions,Installation and Repair Technician Solution,https://www.shl.com/products/product-catalog/view/installation-and-repair-technician-solution/,,,"A
+B
+P
+S",30,SHL Catalog
+Individual Test Solutions,Insurance Account Manager Solution,https://www.shl.com/products/product-catalog/view/insurance-account-manager-solution/,,,"A
+B
+P
+S",30,SHL Catalog
+Individual Test Solutions,Insurance Administrative Assistant Solution,https://www.shl.com/products/product-catalog/view/insurance-administrative-assistant-solution/,,,"A
+B
+P
+S",30,SHL Catalog
+Individual Test Solutions,Insurance Agent Solution,https://www.shl.com/products/product-catalog/view/insurance-agent-solution/,,,"A
+B
+P",30,SHL Catalog
+Individual Test Solutions,Insurance Director Solution,https://www.shl.com/products/product-catalog/view/insurance-director-solution/,,,"A
+B
+P",30,SHL Catalog
+Individual Test Solutions,Insurance Sales Manager Solution,https://www.shl.com/products/product-catalog/view/insurance-sales-manager-solution/,,,"A
+B
+P
+S",30,SHL Catalog
+Individual Test Solutions,Manager - Short Form,https://www.shl.com/products/product-catalog/view/manager-short-form/,,,"A
+B
+K
+P
+S",30,SHL Catalog
+Individual Test Solutions,Manager + 7.0 Solution,https://www.shl.com/products/product-catalog/view/manager-7-0-solution-3955/,,,"A
+B
+C",30,SHL Catalog
+Individual Test Solutions,Manager + 7.1 (Americas),https://www.shl.com/products/product-catalog/view/manager-7-1-solution-4242/,,,"B
+C
+P",31,SHL Catalog
+Individual Test Solutions,Manager + 7.1 (International),https://www.shl.com/products/product-catalog/view/manager-7-1-%28international%29/,,,"B
+C
+P",31,SHL Catalog
+Individual Test Solutions,Manager 7.0 Solution,https://www.shl.com/products/product-catalog/view/manager-7-0-solution/,,,"B
+C",31,SHL Catalog
+Individual Test Solutions,Manager 7.1 (Americas),https://www.shl.com/products/product-catalog/view/manager-7-1-%28americas%29/,,,"B
+C
+P",31,SHL Catalog
+Individual Test Solutions,Manager 7.1 (International),https://www.shl.com/products/product-catalog/view/manager-7-1-solution/,,,"B
+C
+P",31,SHL Catalog
+Individual Test Solutions,Manager 8.0 JFA,https://www.shl.com/products/product-catalog/view/manager-8-0-jfa/,,,"B
+K
+P",31,SHL Catalog
+Individual Test Solutions,Manager 8.0+ JFA,https://www.shl.com/products/product-catalog/view/manager-8-0-jfa-4310/,,,"B
+K
+P",31,SHL Catalog
+Individual Test Solutions,Manufacturing Production Team Member,https://www.shl.com/products/product-catalog/view/manufacturing-production-team-member/,,,"A
+B",31,SHL Catalog
+Individual Test Solutions,Manufacturing Skilled Maintenance Worker,https://www.shl.com/products/product-catalog/view/manufacturing-skilled-maintenance-worker/,,,"A
+B",31,SHL Catalog
+Individual Test Solutions,Network Engineer/Analyst Solution,https://www.shl.com/products/product-catalog/view/network-engineeranalyst-solution/,,,"P
+S
+K
+B
+A",31,SHL Catalog
+Individual Test Solutions,Nurse Leader Solution,https://www.shl.com/products/product-catalog/view/nurse-leader-solution/,,,"S
+A
+B
+P",31,SHL Catalog
+Individual Test Solutions,Nurse Solution,https://www.shl.com/products/product-catalog/view/nurse-solution/,,,"P
+A
+B",31,SHL Catalog
+Individual Test Solutions,Nursing Assistant Solution,https://www.shl.com/products/product-catalog/view/nursing-assistant-solution/,,,"A
+B
+P",32,SHL Catalog
+Individual Test Solutions,Personal Banker - Short Form,https://www.shl.com/products/product-catalog/view/personal-banker-short-form/,,,"A
+B
+K
+P
+S",32,SHL Catalog
+Individual Test Solutions,Phone Banker - Short Form,https://www.shl.com/products/product-catalog/view/phone-banker-short-form/,,,"A
+B
+P",32,SHL Catalog
+Individual Test Solutions,Prep/Line Cook Solution,https://www.shl.com/products/product-catalog/view/prepline-cook-solution/,,,"A
+B
+P",32,SHL Catalog
+Individual Test Solutions,Professional + 7.0 Solution,https://www.shl.com/products/product-catalog/view/professional-7-0-solution-3958/,,,"A
+B
+C",32,SHL Catalog
+Individual Test Solutions,Professional + 7.1 (Americas),https://www.shl.com/products/product-catalog/view/professional-7-1-%28americas%29/,,,"B
+C
+P",32,SHL Catalog
+Individual Test Solutions,Professional + 7.1 (International),https://www.shl.com/products/product-catalog/view/professional-7-1-solution/,,,"B
+C
+P",32,SHL Catalog
+Individual Test Solutions,Professional 7.0 Solution,https://www.shl.com/products/product-catalog/view/professional-7-0-solution/,,,"B
+C",32,SHL Catalog
+Individual Test Solutions,Professional 7.1 (International),https://www.shl.com/products/product-catalog/view/professional-7-1-solution-4247/,,,"C
+B",32,SHL Catalog
+Individual Test Solutions,Professional 8.0 JFA,https://www.shl.com/products/product-catalog/view/professional-8-0-jfa/,,,"B
+K
+P",32,SHL Catalog
+Individual Test Solutions,Professional/Individual Contributor - Short Form,https://www.shl.com/products/product-catalog/view/professionalindividual-contributor-short-form/,,,"A
+B
+P
+S",32,SHL Catalog
+Individual Test Solutions,Project Manager - Short Form,https://www.shl.com/products/product-catalog/view/project-manager-short-form/,,,"A
+B
+P
+S",32,SHL Catalog
+Individual Test Solutions,Proof Operator - Processing Specialist -Short Form,https://www.shl.com/products/product-catalog/view/proof-operator-processing-specialist-short-form/,,,S,33,SHL Catalog
+Individual Test Solutions,Reservation Agent Solution,https://www.shl.com/products/product-catalog/view/reservation-agent-solution/,,,"A
+P
+S
+B",33,SHL Catalog
+Individual Test Solutions,Restaurant Manager Solution,https://www.shl.com/products/product-catalog/view/restaurant-manager-solution/,,,"A
+B
+P
+S",33,SHL Catalog
+Individual Test Solutions,Restaurant Supervisor Solution,https://www.shl.com/products/product-catalog/view/restaurant-supervisor-solution/,,,"A
+B
+P",33,SHL Catalog
+Individual Test Solutions,Retail Consultant Solution,https://www.shl.com/products/product-catalog/view/retail-consultant-solution/,,,"A
+B
+P",33,SHL Catalog
+Individual Test Solutions,Retail Manager w/ Sales Solution,https://www.shl.com/products/product-catalog/view/retail-manager-w-sales-solution/,,,"A
+B
+P",33,SHL Catalog
+Individual Test Solutions,Retail Sales Associate Solution,https://www.shl.com/products/product-catalog/view/retail-sales-associate-solution/,,,"A
+B
+P",33,SHL Catalog
+Individual Test Solutions,Sales Director Solution,https://www.shl.com/products/product-catalog/view/sales-director-solution/,,,"A
+B
+P",33,SHL Catalog
+Individual Test Solutions,Sales Engineer Solution,https://www.shl.com/products/product-catalog/view/sales-engineer-solution/,,,"A
+B
+K
+P
+S",33,SHL Catalog
+Individual Test Solutions,Sales Manager Solution,https://www.shl.com/products/product-catalog/view/sales-manager-solution/,,,"A
+B
+P",33,SHL Catalog
+Individual Test Solutions,Sales Professional 7.0 Solution,https://www.shl.com/products/product-catalog/view/sales-professional-7-0-solution/,,,"C
+B",33,SHL Catalog
+Individual Test Solutions,Sales Professional 7.1 (Americas),https://www.shl.com/products/product-catalog/view/sales-professional-7-1-%28americas%29/,,,"B
+C",33,SHL Catalog
+Individual Test Solutions,Sales Professional Solution,https://www.shl.com/products/product-catalog/view/sales-professional-solution/,,,"A
+B
+P",34,SHL Catalog
+Individual Test Solutions,Sales Representative Solution,https://www.shl.com/products/product-catalog/view/sales-representative-solution/,,,"A
+B
+P",34,SHL Catalog
+Individual Test Solutions,Sales Supervisor Solution,https://www.shl.com/products/product-catalog/view/sales-supervisor-solution/,,,"A
+B
+P",34,SHL Catalog
+Individual Test Solutions,Sales Support Specialist Solution,https://www.shl.com/products/product-catalog/view/sales-support-specialist-solution/,,,"A
+B
+P",34,SHL Catalog
+Individual Test Solutions,Senior Insurance Agent Solution,https://www.shl.com/products/product-catalog/view/senior-insurance-agent-solution/,,,"A
+B
+P",34,SHL Catalog
+Individual Test Solutions,Senior Sales Professional Solution,https://www.shl.com/products/product-catalog/view/senior-sales-professional-solution/,,,"A
+B
+P",34,SHL Catalog
+Individual Test Solutions,Server Solution,https://www.shl.com/products/product-catalog/view/server-solution/,,,"B
+A
+P",34,SHL Catalog
+Individual Test Solutions,Service Associate Solution,https://www.shl.com/products/product-catalog/view/service-associate-solution/,,,"A
+B
+P",34,SHL Catalog
+Individual Test Solutions,Service Supervisor Solution,https://www.shl.com/products/product-catalog/view/service-supervisor-solution/,,,"A
+B
+P",34,SHL Catalog
+Individual Test Solutions,Stock Clerk Solution,https://www.shl.com/products/product-catalog/view/stock-clerk-solution/,,,"A
+B
+P",34,SHL Catalog
+Individual Test Solutions,Store Manager 7.0 Solution,https://www.shl.com/products/product-catalog/view/store-manager-7-0-solution/,,,"B
+C",34,SHL Catalog
+Individual Test Solutions,Store Manager 7.1 (Americas),https://www.shl.com/products/product-catalog/view/store-manager-7-1-%28americas%29/,,,"B
+C",34,SHL Catalog
+Individual Test Solutions,Store Manager 7.1 (International),https://www.shl.com/products/product-catalog/view/store-manager-7-1-%28international%29/,,,"C
+B",35,SHL Catalog
+Individual Test Solutions,Store Manager Solution,https://www.shl.com/products/product-catalog/view/store-manager-solution/,,,"A
+B
+P",35,SHL Catalog
+Individual Test Solutions,Supervisor - Short Form,https://www.shl.com/products/product-catalog/view/supervisor-short-form/,,,S,35,SHL Catalog
+Individual Test Solutions,Supervisor 7.0 Solution,https://www.shl.com/products/product-catalog/view/supervisor-7-0-solution/,,,"B
+C",35,SHL Catalog
+Individual Test Solutions,Supervisor 7.1 (Americas),https://www.shl.com/products/product-catalog/view/supervisor-7-1-%28americas%29/,,,"B
+C
+P",35,SHL Catalog
+Individual Test Solutions,Supervisor 7.1 (International),https://www.shl.com/products/product-catalog/view/supervisor-7-1-%28international%29/,,,"P
+C
+B",35,SHL Catalog
+Individual Test Solutions,Support Associate Solution,https://www.shl.com/products/product-catalog/view/support-associate-solution/,,,"A
+B
+P",35,SHL Catalog
+Individual Test Solutions,Support Supervisor Solution,https://www.shl.com/products/product-catalog/view/support-supervisor-solution/,,,"A
+P
+S
+B",35,SHL Catalog
+Individual Test Solutions,Technical Sales Associate Solution,https://www.shl.com/products/product-catalog/view/technical-sales-associate-solution/,,,"A
+B
+P",35,SHL Catalog
+Individual Test Solutions,Technician/Technologist Solution,https://www.shl.com/products/product-catalog/view/techniciantechnologist-solution/,,,"A
+B
+P",35,SHL Catalog
+Individual Test Solutions,Technology Professional 8.0 Job Focused Assessment,https://www.shl.com/products/product-catalog/view/technology-professional-8-0-job-focused-assessment/,,,"C
+P",35,SHL Catalog
+Individual Test Solutions,Telenurse Solution,https://www.shl.com/products/product-catalog/view/telenurse-solution/,,,"A
+B
+P",35,SHL Catalog

@@ -1,0 +1,21 @@
+baseline_rank,expected,query,reranked_rank
+1,Reservation Agent Solution,reservation agent assessment details,1
+1,Restaurant Manager Solution,restaurant manager solution description,1
+1,Restaurant Supervisor Solution,restaurant supervisor assessment,5
+1,Retail Consultant Solution,retail consultant solution details,6
+1,Retail Manager w/ Sales Solution,retail manager with sales solution,1
+1,Retail Sales Associate Solution,retail sales associate test,4
+1,Sales Director Solution,sales director assessment,2
+1,Sales Engineer Solution,sales engineer competency test,1
+1,Sales Manager Solution,sales manager solution overview,1
+1,Sales Professional 7.0 Solution,sales professional 7.0 solution,2
+1,Proof Operator - Processing Specialist -Short Form,proof operator processing specialist short form,1
+2,Telenurse Solution,telenurse solution assessment,1
+2,Teller 7.0,teller 7.0 test,1
+6,Transcriptionist Solution,transcriptionist solution,1
+4,Workplace Safety - Team 7.0 Solution,workplace safety team solution,1
+8,Store Manager 7.1 (International),store manager 7.1 international,1
+4,Supervisor - Short Form,supervisor short form,1
+8,Support Supervisor Solution,support supervisor solution,1
+9,Technical Sales Associate Solution,technical sales associate assessment,1
+1,.NET MVC (New),.net mvc new test,1
