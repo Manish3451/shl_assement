@@ -4,7 +4,7 @@ import json
 import time
 from pathlib import Path
 from openai import OpenAI
-from backend.config import OPENAI_API_KEY, CHAT_MODEL, MAX_CONTEXT_CHARS
+from src.config import OPENAI_API_KEY, CHAT_MODEL, MAX_CONTEXT_CHARS
 # NOTE: removed top-level import of retrieve_documents to avoid circular imports
 if not OPENAI_API_KEY:
     raise SystemExit("OPENAI_API_KEY missing in environment")
@@ -239,7 +239,7 @@ def call_chat(
             # produce test-type probabilities and retrieve documents internally
             local_probs = get_test_type_probs_via_llm(query)
             # Local (deferred) import to avoid circular import at module import time
-            from backend.services.retriever import retrieve_documents
+            from src.services.retriever import retrieve_documents
             candidates = retrieve_documents(query_text=query, test_type_probs=local_probs, mode="hybrid", k=10)
             # if caller didn't pass test_type_probs, keep the local one
             if test_type_probs is None:

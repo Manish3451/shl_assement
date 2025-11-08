@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
 from pathlib import Path
-from backend.routers.recommendation import router as rec_router
+from src.routers.recommendation import router as rec_router
 
 app = FastAPI(title="SHL Assessment RAG")
 app.include_router(rec_router, prefix="/api")

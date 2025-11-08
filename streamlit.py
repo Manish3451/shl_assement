@@ -4,7 +4,7 @@ from pathlib import Path
 import time
 import os
 import json
-from backend.services.chat import get_test_type_probs_via_llm
+from src.services.chat import get_test_type_probs_via_llm
 
 # ensure repo root is importable (run from repo root)
 REPO_ROOT = Path(__file__).resolve().parents[0]
@@ -34,9 +34,10 @@ python scraper.py
 python combine_res.py
                     """)
                     st.stop()
+
                 
                 # Import and run embedding generation
-                from backend.services.embedder import main as create_embeddings
+                from src.services.embedder import main as create_embeddings
                 
                 st.info("📊 Creating embeddings from assessment data...")
                 create_embeddings()
@@ -60,8 +61,8 @@ check_and_build_vector_store()
 
 # Import your retriever and chat modules (after vector store check)
 try:
-    from backend.services.retriever import retrieve_documents
-    from backend.services.chat import call_chat, format_recommendations
+    from src.services.retriever import retrieve_documents
+    from src.services.chat import call_chat, format_recommendations
 except Exception as e:
     st.error(f"❌ Failed to import modules: {str(e)}")
     st.info("Ensure vector store is built and all dependencies are installed.")

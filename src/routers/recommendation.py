@@ -2,9 +2,9 @@
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel, Field
 from typing import List, Optional, Dict, Any
-from backend.services.retriever import retrieve_documents
-from backend.services.chat import call_chat, format_recommendations, get_test_type_probs_via_llm
-from backend.config import DEFAULT_ALPHA, DEFAULT_K
+from src.services.retriever import retrieve_documents
+from src.services.chat import call_chat, format_recommendations, get_test_type_probs_via_llm
+from src.config import DEFAULT_ALPHA, DEFAULT_K
 
 router = APIRouter()
 
