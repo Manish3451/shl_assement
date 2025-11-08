@@ -4,6 +4,7 @@ from pathlib import Path
 import time
 import os
 import json
+from backend.services.chat import get_test_type_probs_via_llm
 
 # ensure repo root is importable (run from repo root)
 REPO_ROOT = Path(__file__).resolve().parents[0]
@@ -249,33 +250,44 @@ if search_btn:
             if st.checkbox("Show error details"):
                 st.exception(e)
 
-# Full Recommendation functionality
+# Full Recommendation functionality (cleaned & non-duplicated)
 if recommend_btn:
     start_all = time.time()
-    
-    # Create tabs for better organization
-    tab1, tab2, tab3 = st.tabs(["📊 Recommendations", "🔍 Retrieved Assessments", "⚙️ Technical Details"])
-    
+    classify_time = retrieval_time = llm_time = 0.0
+
     try:
-        # Step 1: Retrieve documents
-        with st.spinner("🔍 Retrieving relevant assessments..."):
+        # Step 1: Classify query into test-type probabilities
+        with st.spinner("🔎 Inferring query intent (test-type probabilities)..."):
             t0 = time.time()
+            test_type_probs = get_test_type_probs_via_llm(query)
+            t1 = time.time()
+            classify_time = t1 - t0
+
+        # Optionally display the probabilities
+        st.subheader("Predicted test-type probabilities")
+        for t in sorted(test_type_probs.keys()):
+            st.write(f"{t}: {test_type_probs[t]:.2f}")
+
+        # Step 2: Retrieve documents (pass test_type_probs so retriever can rerank)
+        with st.spinner("🔍 Retrieving relevant assessments..."):
+            r0 = time.time()
             results = retrieve_documents(
                 query_text=query,
                 alpha=alpha,
                 k=k,
-                mode=mode
+                mode=mode,
+                test_type_probs=test_type_probs
             )
-            t1 = time.time()
-            retrieval_time = t1 - t0
-        
+            r1 = time.time()
+            retrieval_time = r1 - r0
+
         if not results:
             st.warning("⚠️ No assessments found. Try adjusting your query or settings.")
             st.stop()
-        
+
         st.success(f"✅ Retrieved {len(results)} assessments in {retrieval_time:.2f}s")
-        
-        # Step 2: Call LLM for recommendations
+
+        # Step 3: Call LLM for recommendations
         with st.spinner("🤖 Analyzing assessments and generating recommendations..."):
             t2 = time.time()
             chat_result = call_chat(
@@ -286,63 +298,60 @@ if recommend_btn:
             )
             t3 = time.time()
             llm_time = t3 - t2
-        
+
         if not chat_result.get("success"):
             st.error(f"❌ LLM analysis failed: {chat_result.get('error', 'Unknown error')}")
             st.stop()
-        
+
         st.success(f"✅ Analysis complete in {llm_time:.2f}s")
-        
-        # Extract results
+
+        # Step 4: Extract and display results
         parsed = chat_result.get("parsed_response", {})
         recommendations = parsed.get("recommendations", [])
         explanation = parsed.get("explanation", "")
-        
-        # Tab 1: Recommendations
+
+        # Create tabs for better organization
+        tab1, tab2, tab3 = st.tabs(["📊 Recommendations", "🔍 Retrieved Assessments", "⚙️ Technical Details"])
+
+        # --- Tab 1: Recommendations ---
         with tab1:
             st.header("✨ AI-Powered Recommendations")
-            
-            # Show explanation
+
             if explanation:
                 st.markdown("### 📝 Analysis")
                 st.info(explanation)
                 st.markdown("---")
-            
-            # Show recommendations
+
             if recommendations:
-                st.markdown(f"### 🎯 Top {len(recommendations)} Recommended Assessment{'s' if len(recommendations) > 1 else ''}")
-                
+                st.markdown(f"### 🎯 Top {len(recommendations)} Recommended Assessments")
                 for i, rec in enumerate(recommendations, 1):
                     with st.container():
                         name = rec.get("name", "Unknown")
                         justification = rec.get("justification", "")
                         url = rec.get("url", "")
-                        
+
                         col1, col2 = st.columns([5, 1])
-                        
                         with col1:
                             st.markdown(f"#### {i}. {name}")
                             if justification:
                                 st.write(justification)
-                        
                         with col2:
                             if url and url != "URL not available":
                                 st.markdown(f"[🔗 Details]({url})")
-                        
+
                         st.divider()
             else:
                 st.warning("No specific recommendations generated. See retrieved assessments in the next tab.")
-            
-            # Show formatted output
+
             if show_context:
                 with st.expander("📄 Full Formatted Response"):
                     st.text(format_recommendations(parsed))
-        
-        # Tab 2: Retrieved Assessments
+
+        # --- Tab 2: Retrieved Assessments ---
         with tab2:
             st.header("🔍 All Retrieved Assessments")
             st.markdown(f"Showing all {len(results)} assessments retrieved from the database.")
-            
+
             if show_raw_results:
                 for i, result in enumerate(results, 1):
                     with st.expander(f"{i}. {result.get('name', 'Unknown')}"):
@@ -353,7 +362,7 @@ if recommend_btn:
                     text = result.get("text", "")
                     metadata = result.get("metadata", {})
                     url = metadata.get("url", "")
-                    
+
                     st.markdown(f"### {i}. {name}")
                     if text:
                         preview = text[:400].replace("\n", " ")
@@ -361,13 +370,12 @@ if recommend_btn:
                     if url:
                         st.markdown(f"[🔗 View Full Assessment]({url})")
                     st.divider()
-        
-        # Tab 3: Technical Details
+
+        # --- Tab 3: Technical Details ---
         with tab3:
             st.header("⚙️ Technical Details")
-            
+
             col1, col2 = st.columns(2)
-            
             with col1:
                 st.subheader("🔍 Retrieval Info")
                 st.json({
@@ -375,9 +383,10 @@ if recommend_btn:
                     "alpha": alpha,
                     "k": k,
                     "num_retrieved": len(results),
-                    "retrieval_time": f"{retrieval_time:.2f}s"
+                    "retrieval_time": f"{retrieval_time:.2f}s",
+                    "classification_time": f"{classify_time:.2f}s"
                 })
-            
+
             with col2:
                 st.subheader("🤖 LLM Info")
                 usage = chat_result.get("usage", {})
@@ -390,27 +399,30 @@ if recommend_btn:
                     "total_tokens": usage.get("total_tokens", 0) if usage else 0,
                     "llm_time": f"{llm_time:.2f}s"
                 })
-            
+
             if show_context:
                 st.subheader("📄 Raw LLM Response")
                 st.code(chat_result.get("answer", ""), language="json")
-            
+
             st.subheader("📊 Performance Summary")
             total_time = time.time() - start_all
             st.metric("Total Time", f"{total_time:.2f}s")
-            
+
             perf_data = {
+                "Classification": classify_time,
                 "Retrieval": retrieval_time,
                 "LLM Processing": llm_time,
-                "Other": max(0, total_time - retrieval_time - llm_time)
+                "Other": max(0, total_time - classify_time - retrieval_time - llm_time)
             }
             st.bar_chart(perf_data)
-        
-        # Show timing at bottom if enabled
+
         if show_timing:
             st.markdown("---")
-            st.success(f"✅ **Total pipeline completed in {time.time() - start_all:.2f}s** (Retrieval: {retrieval_time:.2f}s | LLM: {llm_time:.2f}s)")
-    
+            st.success(
+                f"✅ **Pipeline completed in {time.time() - start_all:.2f}s** "
+                f"(Classification: {classify_time:.2f}s | Retrieval: {retrieval_time:.2f}s | LLM: {llm_time:.2f}s)"
+            )
+
     except Exception as e:
         st.error(f"❌ Pipeline failed: {str(e)}")
         if st.checkbox("Show full error traceback"):

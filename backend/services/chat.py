@@ -5,7 +5,7 @@ import time
 from pathlib import Path
 from openai import OpenAI
 from backend.config import OPENAI_API_KEY, CHAT_MODEL, MAX_CONTEXT_CHARS
-
+# NOTE: removed top-level import of retrieve_documents to avoid circular imports
 if not OPENAI_API_KEY:
     raise SystemExit("OPENAI_API_KEY missing in environment")
 
@@ -25,7 +25,7 @@ Your task:
 6. Include official SHL URLs when available.
 
 Guidelines:
-- Recommend 2–4 specific SHL assessments whenever possible.
+- Recommend up to 10 specific SHL assessments whenever possible (minimum 1, maximum 10).
 - Tailor the recommendations to the role type and seniority (e.g., entry-level, mid, or senior).
 - For each test, provide: the name, URL, and justification (1–2 sentences).
 - If no matching assessments are found, explain why and ask for clarifying details (e.g., job level, focus area, skills needed).
@@ -44,109 +44,160 @@ Response format (JSON):
 }
 """
 
-CONTEXT_SEPARATOR = "\n" + "="*80 + "\n"
+CONTEXT_SEPARATOR = "\n" + "=" * 80 + "\n"
 
-def build_context_blocks(
-    candidates: List[Dict[str, Any]], 
-    max_chars: int = MAX_CONTEXT_CHARS
-) -> str:
-    """
-    Build context string from candidate documents with smart truncation.
-    
-    Args:
-        candidates: List of dicts with keys: name, text, metadata
-        max_chars: Maximum characters for context
-    
-    Returns:
-        Formatted context string
-    """
+
+def build_context_blocks(candidates: List[Dict[str, Any]], max_chars: int = MAX_CONTEXT_CHARS) -> str:
     if not candidates:
         return "No relevant assessments found in the database."
     
     pieces = []
     total = 0
-    
+
     for idx, c in enumerate(candidates, 1):
-        # Extract metadata
         name = (
-            c.get("name") or 
-            c.get("metadata", {}).get("assessment_name") or 
-            f"Assessment {idx}"
+            c.get("name")
+            or c.get("metadata", {}).get("assessment_name")
+            or f"Assessment {idx}"
         )
         url = c.get("metadata", {}).get("url", "URL not available")
         text = c.get("text", "").strip()
-        
-        # Truncate text if too long
+
         if len(text) > 500:
             text = text[:500] + "..."
-        
-        # Build block
-        block = (
-            f"[{idx}] {name}\n"
-            f"URL: {url}\n"
-            f"Description: {text}"
-        )
-        
-        # Check if we can fit this block
+
+        block = f"[{idx}] {name}\nURL: {url}\nDescription: {text}"
+
         block_len = len(block) + len(CONTEXT_SEPARATOR)
         if total + block_len > max_chars:
             remaining = max_chars - total
-            if remaining > 100:  # Only add if we have meaningful space
+            if remaining > 100:
                 pieces.append(block[:remaining] + "...")
             break
-        
+
         pieces.append(block)
         total += block_len
-    
+
     context = CONTEXT_SEPARATOR.join(pieces)
     context += f"\n\nTotal assessments provided: {len(pieces)}"
     return context
 
+
+def get_test_type_probs_via_llm(query: str) -> Dict[str, float]:
+    classification_prompt = f"""
+You are an SHL test classification expert.
+Given the following hiring query, classify it into SHL test types.
+Return a JSON object with probability values (0.0–1.0) for each type.
+The probabilities MUST sum to exactly 1.0.
+
+Test Types:
+A: Ability & Aptitude
+B: Biodata & Situational Judgement
+C: Competencies
+D: Development & 360
+E: Assessment Exercises
+K: Knowledge & Skills
+P: Personality & Behavior
+S: Simulations
+
+Use probabilities that reflect the relevance of each test type.
+
+Examples:
+
+Query: "Need a Java developer test"
+Classification: {{"A":0.15,"B":0.0,"C":0.05,"D":0.0,"E":0.0,"K":0.75,"P":0.05,"S":0.0}}
+
+Query: "Assess leadership and communication skills"
+Classification: {{"A":0.0,"B":0.0,"C":0.25,"D":0.05,"E":0.0,"K":0.05,"P":0.60,"S":0.05}}
+
+Query: "Evaluate analytical and reasoning ability"
+Classification: {{"A":0.70,"B":0.0,"C":0.15,"D":0.0,"E":0.0,"K":0.10,"P":0.0,"S":0.05}}
+
+Query: "Test interpersonal style and workplace behavior"
+Classification: {{"A":0.0,"B":0.05,"C":0.15,"D":0.0,"E":0.0,"K":0.0,"P":0.75,"S":0.05}}
+
+Query: "Assess situational judgement and decision making in customer service roles"
+Classification: {{"A":0.05,"B":0.55,"C":0.20,"D":0.0,"E":0.0,"K":0.10,"P":0.10,"S":0.0}}
+
+Query: "Find a test to evaluate managerial potential and development needs"
+Classification: {{"A":0.10,"B":0.05,"C":0.30,"D":0.40,"E":0.05,"K":0.05,"P":0.05,"S":0.0}}
+
+Query: "Simulate a real-life sales conversation to assess persuasion skills"
+Classification: {{"A":0.05,"B":0.10,"C":0.15,"D":0.0,"E":0.05,"K":0.10,"P":0.30,"S":0.25}}
+
+Query: "Evaluate spreadsheet and Excel knowledge for finance roles"
+Classification: {{"A":0.20,"B":0.0,"C":0.05,"D":0.0,"E":0.0,"K":0.70,"P":0.05,"S":0.0}}
+
+Query: "Use an in-basket exercise to test how managers prioritize tasks"
+Classification: {{"A":0.05,"B":0.0,"C":0.20,"D":0.15,"E":0.45,"K":0.10,"P":0.05,"S":0.0}}
+
+Query: "Assess coding and algorithmic problem-solving for software engineers"
+Classification: {{"A":0.40,"B":0.0,"C":0.05,"D":0.0,"E":0.0,"K":0.50,"P":0.05,"S":0.0}}
+
+Now classify this query:
+"{query}"
+
+Output JSON strictly in this format (probabilities MUST sum to 1.0):
+{{
+  "A": 0.0,
+  "B": 0.0,
+  "C": 0.0,
+  "D": 0.0,
+  "E": 0.0,
+  "K": 0.0,
+  "P": 0.0,
+  "S": 0.0
+}}
+"""
+
+    try:
+        response = client.chat.completions.create(
+            model="gpt-4o-mini",
+            messages=[
+                {"role": "system", "content": "You are an SHL test-type classifier."},
+                {"role": "user", "content": classification_prompt},
+            ],
+            temperature=0,
+            max_tokens=200,
+            response_format={"type": "json_object"},
+        )
+        probs = json.loads(response.choices[0].message.content)
+        probs_dict = {k: float(v) for k, v in probs.items()}
+        
+        # Normalize so they sum to 1.0
+        total = sum(probs_dict.values())
+        if total > 0:
+            probs_dict = {k: v / total for k, v in probs_dict.items()}
+        
+        return probs_dict
+    except Exception as e:
+        print("⚠️ Type classification failed, defaulting to zeros:", e)
+        return {t: 0.0 for t in ["A", "B", "C", "D", "E", "K", "P", "S"]}
+
+
 def make_messages(
-    query: str, 
+    query: str,
     candidates: List[Dict[str, Any]],
-    conversation_history: Optional[List[Dict[str, str]]] = None
+    conversation_history: Optional[List[Dict[str, str]]] = None,
+    test_type_probs: Optional[Dict[str, float]] = None,
 ) -> List[Dict[str, str]]:
-    """
-    Create messages for ChatCompletion API.
-    
-    Args:
-        query: User's question
-        candidates: Retrieved assessment documents
-        conversation_history: Optional previous conversation turns
-    
-    Returns:
-        List of message dicts for OpenAI API
-    """
     context = build_context_blocks(candidates)
-    
     user_message = (
         f"User Question: {query}\n\n"
         f"Available Assessments:\n{context}\n\n"
         "Please analyze these assessments and provide recommendations in JSON format."
     )
-    
+
     messages = [{"role": "system", "content": SYSTEM_PROMPT}]
-    
-    # Add conversation history if provided
+
     if conversation_history:
         messages.extend(conversation_history)
-    
+
     messages.append({"role": "user", "content": user_message})
-    
     return messages
 
+
 def parse_json_response(content: str) -> Dict[str, Any]:
-    """
-    Parse JSON from LLM response, handling markdown code blocks.
-    
-    Args:
-        content: Raw response content
-    
-    Returns:
-        Parsed JSON dict or structured error response
-    """
-    # Remove markdown code blocks if present
     content = content.strip()
     if content.startswith("```json"):
         content = content[7:]
@@ -155,75 +206,84 @@ def parse_json_response(content: str) -> Dict[str, Any]:
     if content.endswith("```"):
         content = content[:-3]
     content = content.strip()
-    
+
     try:
         return json.loads(content)
     except json.JSONDecodeError as e:
-        # Return structured error if JSON parsing fails
         return {
             "recommendations": [],
-            "explanation": content,  # Use raw content as explanation
-            "error": f"Failed to parse JSON: {str(e)}"
+            "explanation": content,
+            "error": f"Failed to parse JSON: {str(e)}",
         }
+
 
 def call_chat(
     query: str,
-    candidates: List[Dict[str, Any]],
+    candidates: Optional[List[Dict[str, Any]]] = None,
     model: str = CHAT_MODEL,
     temperature: float = 0.0,
     max_tokens: int = 1000,
-    conversation_history: Optional[List[Dict[str, str]]] = None
+    conversation_history: Optional[List[Dict[str, str]]] = None,
+    test_type_probs: Optional[Dict[str, float]] = None
 ) -> Dict[str, Any]:
     """
     Call OpenAI Chat API to generate assessment recommendations.
-    
-    Args:
-        query: User's question
-        candidates: Retrieved assessment documents
-        model: OpenAI model to use
-        temperature: Sampling temperature (0-2)
-        max_tokens: Maximum tokens in response
-        conversation_history: Optional previous conversation
-    
-    Returns:
-        Dict with answer, parsed_response, usage stats, and timing
+
+    If `candidates` is provided, the function uses them directly and does not
+    run classification or retrieval. If `candidates` is None, the function
+    will run classification and retrieval internally (backward-compatible).
     """
     try:
-        messages = make_messages(query, candidates, conversation_history)
+        # If candidates not provided, run classification and retrieval as fallback
+        if candidates is None:
+            # produce test-type probabilities and retrieve documents internally
+            local_probs = get_test_type_probs_via_llm(query)
+            # Local (deferred) import to avoid circular import at module import time
+            from backend.services.retriever import retrieve_documents
+            candidates = retrieve_documents(query_text=query, test_type_probs=local_probs, mode="hybrid", k=10)
+            # if caller didn't pass test_type_probs, keep the local one
+            if test_type_probs is None:
+                test_type_probs = local_probs
+        else:
+            # candidates were provided by caller; if no test_type_probs present, try to compute them
+            if test_type_probs is None:
+                test_type_probs = get_test_type_probs_via_llm(query)
+
+        # Build messages including test_type_probs for transparency to the LLM
+        # Modify make_messages to accept test_type_probs if not already supporting it.
+        messages = make_messages(query, candidates, conversation_history, test_type_probs=test_type_probs)
+
         start = time.time()
-        
         response = client.chat.completions.create(
             model=model,
             messages=messages,
             temperature=temperature,
             max_tokens=max_tokens,
-            response_format={"type": "json_object"}  # Force JSON output
+            response_format={"type": "json_object"}
         )
-        
         elapsed = time.time() - start
-        
-        # Extract response
+
         content = response.choices[0].message.content.strip()
         parsed = parse_json_response(content)
-        
-        # Build result
+
         result = {
             "answer": content,
             "parsed_response": parsed,
             "usage": {
-                "prompt_tokens": response.usage.prompt_tokens,
-                "completion_tokens": response.usage.completion_tokens,
-                "total_tokens": response.usage.total_tokens
+                "prompt_tokens": getattr(response.usage, "prompt_tokens", None),
+                "completion_tokens": getattr(response.usage, "completion_tokens", None),
+                "total_tokens": getattr(response.usage, "total_tokens", None)
             },
             "elapsed": round(elapsed, 2),
             "model": model,
-            "success": True
+            "success": True,
+            "test_type_probs": test_type_probs,
+            "candidates": candidates
         }
-        
+
         return result
-        
+
     except Exception as e:
-        # Handle errors gracefully
         return {
             "answer": "",
             "parsed_response": {
@@ -237,24 +297,13 @@ def call_chat(
             "error": str(e)
         }
 
+
 def format_recommendations(parsed_response: Dict[str, Any]) -> str:
-    """
-    Format parsed recommendations into readable text.
-    
-    Args:
-        parsed_response: Parsed JSON response
-    
-    Returns:
-        Formatted string for display
-    """
     output = []
-    
-    # Add explanation
     if "explanation" in parsed_response:
         output.append(parsed_response["explanation"])
         output.append("")
-    
-    # Add recommendations
+
     recommendations = parsed_response.get("recommendations", [])
     if recommendations:
         output.append("Recommended Assessments:")
@@ -263,7 +312,6 @@ def format_recommendations(parsed_response: Dict[str, Any]) -> str:
             name = rec.get("name", "Unknown")
             url = rec.get("url", "")
             justification = rec.get("justification", "")
-            
             output.append(f"{idx}. {name}")
             if justification:
                 output.append(f"   {justification}")
@@ -272,25 +320,20 @@ def format_recommendations(parsed_response: Dict[str, Any]) -> str:
             output.append("")
     else:
         output.append("No specific assessments could be recommended based on your query.")
-    
     return "\n".join(output)
 
 
-# Example usage
 if __name__ == "__main__":
-    # Mock candidates for testing
     mock_candidates = [
         {
             "name": "Verify G+ Test",
             "text": "Measures general cognitive ability and reasoning skills.",
-            "metadata": {"url": "https://example.com/verify-g-plus"}
+            "metadata": {"url": "https://example.com/verify-g-plus"},
         }
     ]
-    
     query = "I need to assess problem-solving skills for software engineers"
     result = call_chat(query, mock_candidates)
-    
     print(f"Response time: {result['elapsed']}s")
     print(f"Tokens used: {result['usage']['total_tokens']}")
-    print("\n" + "="*80)
-    print(format_recommendations(result['parsed_response']))
+    print("\n" + "=" * 80)
+    print(format_recommendations(result["parsed_response"]))

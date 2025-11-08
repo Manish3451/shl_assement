@@ -3,7 +3,7 @@ from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel, Field
 from typing import List, Optional, Dict, Any
 from backend.services.retriever import retrieve_documents
-from backend.services.chat import call_chat, format_recommendations
+from backend.services.chat import call_chat, format_recommendations, get_test_type_probs_via_llm
 from backend.config import DEFAULT_ALPHA, DEFAULT_K
 
 router = APIRouter()
@@ -50,17 +50,9 @@ class RecommendRequest(BaseModel):
             }
         }
 
-class RecommendResponse(BaseModel):
-    query: str
-    candidates_used: List[Dict[str, Any]]
-    recommendations: List[Dict[str, Any]]
-    explanation: str
-    llm_response: Dict[str, Any]
-    formatted_output: str
-    retrieval_info: Dict[str, Any]
-    success: bool
 
-@router.post("/recommend", response_model=RecommendResponse)
+
+@router.post("/recommend")
 def recommend(req: RecommendRequest):
     """
     Get assessment recommendations based on user query.
@@ -83,12 +75,16 @@ def recommend(req: RecommendRequest):
         )
     
     try:
+        test_type_probs = get_test_type_probs_via_llm(q)
+
+
         # 1. Retrieve candidate documents
         candidates = retrieve_documents(
             query_text=q,
             alpha=req.alpha,
             k=req.k,
-            mode=req.mode
+            mode=req.mode,
+            test_type_probs=test_type_probs
         )
         
         if not candidates:
@@ -102,7 +98,8 @@ def recommend(req: RecommendRequest):
             query=q,
             candidates=candidates,
             temperature=req.temperature,
-            max_tokens=req.max_tokens
+            max_tokens=req.max_tokens,
+            test_type_probs=test_type_probs
         )
         
         if not chat_result.get("success"):
@@ -127,27 +124,32 @@ def recommend(req: RecommendRequest):
         ]
         
         # 5. Build response
-        return RecommendResponse(
-            query=q,
-            candidates_used=candidates_summary,
-            recommendations=recommendations,
-            explanation=explanation,
-            llm_response={
-                "raw_answer": chat_result.get("answer", ""),
-                "usage": chat_result.get("usage"),
-                "elapsed_seconds": chat_result.get("elapsed"),
-                "model": chat_result.get("model")
-            },
-            formatted_output=format_recommendations(parsed),
-            retrieval_info={
-                "mode": req.mode,
-                "alpha": req.alpha,
-                "k": req.k,
-                "num_candidates_retrieved": len(candidates),
-                "num_recommendations": len(recommendations)
-            },
-            success=True
-        )
+        # 5. Build response in required format
+        formatted_recommendations = []
+        for rec in recommendations:
+    # Find matching candidate to get metadata
+            matching_candidate = next(
+        (c for c in candidates if c.get("name") == rec.get("name")),
+        None
+    )
+    
+            if matching_candidate:
+                metadata = matching_candidate.get("metadata", {})
+        
+                formatted_rec = {
+                    "url": rec.get("url", ""),
+                    "name": rec.get("name", ""),
+                    "adaptive_support": metadata.get("adaptive_support", "No"),
+                    "description": rec.get("justification", ""),
+                    "duration": metadata.get("duration", "Not specified"),
+                    "remote_support": metadata.get("remote_support", "No"),
+                    "test_type": metadata.get("test_type", [])
+                }
+                formatted_recommendations.append(formatted_rec)
+
+        return {
+            "recommended_assessments": formatted_recommendations
+        }
         
     except HTTPException:
         # Re-raise HTTP exceptions

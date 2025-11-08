@@ -63,7 +63,18 @@ class DocumentProcessor:
                 f"Description: {rec.get('description','')}\n"
                 f"Suitable for: {rec.get('suitable_for','')}\n"
             )
-            docs.append(Document(page_content=content, metadata={"assessment_name": name, "url": rec.get("url", "")}))
+            docs.append(Document(
+                        page_content=content, 
+                        metadata={
+                            "assessment_name": name, 
+                            "url": rec.get("url", ""),
+                            "adaptive_support": rec.get("adaptive_irt", "No"),
+                            "duration": rec.get("duration", "Not specified"),
+                            "remote_support": rec.get("remote_testing", "No"),
+                            "test_type": rec.get("test_type", "").split() if rec.get("test_type") else [],
+                            "description": rec.get("description", "")
+                        }
+        ))
         return docs
 
     def chunk_documents(self, docs):
