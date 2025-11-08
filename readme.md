@@ -1,5 +1,8 @@
 # RAG-based Retrieval — SHL Product Catalog
 
+🔗 **Live Demo:** [Streamlit App](https://shlassement-s2vdfjulxngmqeaapjsmfx.streamlit.app/)
+
+
 > Single-file README for the repository. Includes project summary, repository file structure, development workflow (dense → sparse → hybrid), evaluation metrics, runbook, and quick notes about the web-scraping challenges you mentioned.
 
 ---
