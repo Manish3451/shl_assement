@@ -35,7 +35,6 @@ secrets.*
 .env
 __pycache__/
 *.pyc
-data/vector_store/
 
 # -------------------------
 # OS / IDE files
