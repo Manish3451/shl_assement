@@ -1,0 +1,77 @@
+{
+  "total_queries": 3,
+  "k_values": [
+    5,
+    10
+  ],
+  "per_query_results": [
+    {
+      "query": "I am hiring Java developers with strong backend programming skills. Can you suggest some assessments that will help me evaluate their expertise in Java and related frameworks?",
+      "relevant_count": 6,
+      "retrieved_count": 5,
+      "relevant_assessments": [
+        "Core Java (Advanced Level) (New)",
+        "Core Java (Entry Level) (New)",
+        "Java 2 Platform Enterprise Edition 1.4 Fundamental",
+        "Java Design Patterns (New)",
+        "Java Platform Enterprise Edition 7 (Java EE 7)",
+        "Java Web Services (New)"
+      ],
+      "retrieved_assessments": [
+        "Java Frameworks (New)",
+        "Java Platform Enterprise Edition 7 (Java EE 7)",
+        "Core Java (Advanced Level) (New)",
+        "Java Design Patterns (New)",
+        "Java 8 (New)"
+      ],
+      "recall_scores": {
+        "recall@5": 0.5,
+        "recall@10": 0.5
+      }
+    },
+    {
+      "query": "I want to hire entry-level candidates for sales roles in my organization. Can you suggest suitable assessments to evaluate their sales potential?",
+      "relevant_count": 2,
+      "retrieved_count": 5,
+      "relevant_assessments": [
+        "Entry Level Sales Solution",
+        "OPQ MQ Sales Report"
+      ],
+      "retrieved_assessments": [
+        "Entry Level Sales Solution",
+        "OPQ MQ Sales Report",
+        "Entry Level Customer Serv-Retail & Contact Center",
+        "Customer Service Phone Solution",
+        "Dependability and Safety Instrument (DSI)"
+      ],
+      "recall_scores": {
+        "recall@5": 1.0,
+        "recall@10": 1.0
+      }
+    },
+    {
+      "query": "I am hiring candidates who need strong communication skills and customer-facing ability. Suggest assessments to measure their communication strengths.",
+      "relevant_count": 3,
+      "retrieved_count": 4,
+      "relevant_assessments": [
+        "Business Communication (adaptive)",
+        "Business Communications",
+        "Interpersonal Communications"
+      ],
+      "retrieved_assessments": [
+        "Business Communications",
+        "Business Communication (adaptive)",
+        "Interpersonal Communications",
+        "Customer Service Phone Solution"
+      ],
+      "recall_scores": {
+        "recall@5": 1.0,
+        "recall@10": 1.0
+      }
+    }
+  ],
+  "mean_recall": {
+    "mean_recall@5": 0.8333333333333334,
+    "mean_recall@10": 0.8333333333333334
+  }
+}

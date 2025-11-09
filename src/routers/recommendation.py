@@ -8,6 +8,38 @@ from src.config import DEFAULT_ALPHA, DEFAULT_K
 
 router = APIRouter()
 
+def fuzzy_match_candidate(rec_name: str, candidates: List[Dict]) -> Optional[Dict]:
+    """
+    Find matching candidate using fuzzy name matching.
+    Handles cases like 'Python (New)' vs 'Python Programming'
+    """
+    rec_name_lower = rec_name.lower().strip()
+    
+    # Try exact match first
+    for c in candidates:
+        if c.get("name", "").lower().strip() == rec_name_lower:
+            return c
+    
+    # Try partial match (one contains the other)
+    for c in candidates:
+        candidate_name = c.get("name", "").lower().strip()
+        if rec_name_lower in candidate_name or candidate_name in rec_name_lower:
+            return c
+    
+    # Try matching on first significant word
+    rec_words = set(rec_name_lower.split())
+    for c in candidates:
+        candidate_name = c.get("name", "").lower().strip()
+        candidate_words = set(candidate_name.split())
+        # If 60% of words match
+        if len(rec_words & candidate_words) / len(rec_words) > 0.6:
+            return c
+    
+    return None
+
+
+
+
 class RecommendRequest(BaseModel):
     query: str = Field(..., description="User's assessment search query", min_length=1)
     alpha: Optional[float] = Field(
@@ -128,10 +160,7 @@ def recommend(req: RecommendRequest):
         formatted_recommendations = []
         for rec in recommendations:
     # Find matching candidate to get metadata
-            matching_candidate = next(
-        (c for c in candidates if c.get("name") == rec.get("name")),
-        None
-    )
+            matching_candidate = fuzzy_match_candidate(rec.get("name", ""), candidates)
     
             if matching_candidate:
                 metadata = matching_candidate.get("metadata", {})
@@ -180,23 +209,43 @@ def health_check():
 def search_only(req: RecommendRequest):
     """
     Search for assessments without LLM recommendations.
-    Returns raw retrieval results only.
+    Returns raw retrieval results with scores.
     """
     q = req.query.strip()
     if not q:
         raise HTTPException(status_code=400, detail="Query cannot be empty")
     
     try:
+        # Get test type probabilities for better scoring
+        test_type_probs = get_test_type_probs_via_llm(q)
+        
+        # Retrieve candidates with scoring
         candidates = retrieve_documents(
             query_text=q,
             alpha=req.alpha,
             k=req.k,
-            mode=req.mode
+            mode=req.mode,
+            test_type_probs=test_type_probs
         )
+        
+        # Format results to include all scoring details
+        formatted_results = []
+        for idx, candidate in enumerate(candidates, 1):
+            formatted_results.append({
+                "rank": idx,
+                "name": candidate.get("name", "Unknown"),
+                "url": candidate.get("metadata", {}).get("url", ""),
+                "similarity_score": round(candidate.get("score", 0.0), 4),
+                "type_alignment_score": round(candidate.get("s_type", 0.0), 4),
+                "final_score": round(candidate.get("final_score", 0.0), 4),
+                "test_type": candidate.get("metadata", {}).get("test_type", []),
+                "description_preview": candidate.get("text", "")[:200]
+            })
         
         return {
             "query": q,
-            "results": candidates,
+            "test_type_probs": test_type_probs,
+            "results": formatted_results,
             "count": len(candidates),
             "retrieval_info": {
                 "mode": req.mode,
@@ -210,3 +259,8 @@ def search_only(req: RecommendRequest):
             status_code=500,
             detail=f"Search failed: {str(e)}"
         )
+
+
+
+
+ 

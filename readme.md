@@ -112,20 +112,12 @@ You mentioned web scraping was the most difficult part. That’s common — page
 
 ---
 
-## Your evaluation metrics (as provided)
+##  evaluation metrics (as provided)
 
-* Top-1: 0.85
-* Top-3: 0.95
-* Top-5: 0.95
-* MRR: 0.90
-* Precision@10: 0.095
-* Recall@10: 0.95
-* nDCG: 0.91
+
+* Recall@10: 0.45
 * Avg retrieval time: 1.7 s
 * Avg LLM time: 6.0 s
-
-These show very strong ranking quality; the main friction is LLM re-ranking latency for interactive use.
-
 ---
 
 

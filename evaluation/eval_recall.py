@@ -4,7 +4,7 @@ from typing import List, Dict, Tuple
 from pathlib import Path
 
 # Configuration
-API_URL = "https://shl-assement-1.onrender.com/api/recommend"  
+API_URL = "http://127.0.0.1:8000/api/recommend"  
 GROUND_TRUTH_FILE = Path(__file__).parent / "ground_truth.json"
 RESULTS_FILE = Path(__file__).parent / "eval_results.json"
 

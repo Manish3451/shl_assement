@@ -9,7 +9,6 @@ from src.config import OPENAI_API_KEY, CHAT_MODEL, MAX_CONTEXT_CHARS
 if not OPENAI_API_KEY:
     raise SystemExit("OPENAI_API_KEY missing in environment")
 
-# Use modern OpenAI client
 client = OpenAI(api_key=OPENAI_API_KEY)
 
 SYSTEM_PROMPT = """
@@ -25,7 +24,12 @@ Your task:
 6. Include official SHL URLs when available.
 
 Guidelines:
-- Recommend up to 10 specific SHL assessments whenever possible (minimum 1, maximum 10).
+- Recommend between 5 to 10 specific SHL assessments based on relevance.
+- Aim for 10 recommendations when 10 truly relevant assessments are available.
+- Recommend 5-9 assessments if only that many are relevant and suitable.
+- Only recommend assessments that are actually provided in the candidate list.
+- Use the EXACT assessment names as provided in the candidate list.
+- Quality over quantity: only recommend assessments that genuinely fit the role.
 - Tailor the recommendations to the role type and seniority (e.g., entry-level, mid, or senior).
 - For each test, provide: the name, URL, and justification (1–2 sentences).
 - If no matching assessments are found, explain why and ask for clarifying details (e.g., job level, focus area, skills needed).
@@ -33,6 +37,7 @@ Guidelines:
 
 Response format (JSON):
 {
+    
   "recommendations": [
     {
       "name": "Assessment Name",

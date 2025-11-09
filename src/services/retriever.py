@@ -2,7 +2,8 @@ from pathlib import Path
 import argparse
 from dotenv import load_dotenv
 from langchain_openai import OpenAIEmbeddings
-from langchain.retrievers import BM25Retriever, EnsembleRetriever
+from langchain_community.retrievers import BM25Retriever
+from langchain.retrievers.ensemble import EnsembleRetriever
 from src.services.chat import get_test_type_probs_via_llm
 from langchain_community.vectorstores import FAISS
 import numpy as np
