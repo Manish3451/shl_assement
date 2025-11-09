@@ -236,7 +236,7 @@ Why this works:
 ## 6. Stage 4: LLM Recommendation Engine
 
 <p align="center">
-  <img src="images/LLM Recommendation.png" alt="LLM Recommendation" width="900" />
+  <img src="images/LLM Recomendation.png" alt="LLM Recommendation Engine" width="900" />
 </p>
 
 
