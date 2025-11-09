@@ -8,38 +8,6 @@ from src.config import DEFAULT_ALPHA, DEFAULT_K
 
 router = APIRouter()
 
-def fuzzy_match_candidate(rec_name: str, candidates: List[Dict]) -> Optional[Dict]:
-    """
-    Find matching candidate using fuzzy name matching.
-    Handles cases like 'Python (New)' vs 'Python Programming'
-    """
-    rec_name_lower = rec_name.lower().strip()
-    
-    # Try exact match first
-    for c in candidates:
-        if c.get("name", "").lower().strip() == rec_name_lower:
-            return c
-    
-    # Try partial match (one contains the other)
-    for c in candidates:
-        candidate_name = c.get("name", "").lower().strip()
-        if rec_name_lower in candidate_name or candidate_name in rec_name_lower:
-            return c
-    
-    # Try matching on first significant word
-    rec_words = set(rec_name_lower.split())
-    for c in candidates:
-        candidate_name = c.get("name", "").lower().strip()
-        candidate_words = set(candidate_name.split())
-        # If 60% of words match
-        if len(rec_words & candidate_words) / len(rec_words) > 0.6:
-            return c
-    
-    return None
-
-
-
-
 class RecommendRequest(BaseModel):
     query: str = Field(..., description="User's assessment search query", min_length=1)
     alpha: Optional[float] = Field(
@@ -83,7 +51,6 @@ class RecommendRequest(BaseModel):
         }
 
 
-
 @router.post("/recommend")
 def recommend(req: RecommendRequest):
     """
@@ -108,7 +75,6 @@ def recommend(req: RecommendRequest):
     
     try:
         test_type_probs = get_test_type_probs_via_llm(q)
-
 
         # 1. Retrieve candidate documents
         candidates = retrieve_documents(
@@ -145,28 +111,20 @@ def recommend(req: RecommendRequest):
         recommendations = parsed.get("recommendations", [])
         explanation = parsed.get("explanation", "")
         
-        # 4. Format candidates for response
-        candidates_summary = [
-            {
-                "name": c.get("name", "Unknown"),
-                "url": c.get("metadata", {}).get("url", ""),
-                "has_content": bool(c.get("text", "").strip())
-            }
-            for c in candidates
-        ]
-        
-        # 5. Build response
-        # 5. Build response in required format
+        # 4. Build response in required format
         formatted_recommendations = []
         for rec in recommendations:
-    # Find matching candidate to get metadata
-            matching_candidate = fuzzy_match_candidate(rec.get("name", ""), candidates)
-    
+            # Find matching candidate to get metadata
+            matching_candidate = next(
+                (c for c in candidates if c.get("name") == rec.get("name")),
+                None
+            )
+            
             if matching_candidate:
                 metadata = matching_candidate.get("metadata", {})
-        
+                
                 formatted_rec = {
-                    "url": rec.get("url", ""),
+                    "url": metadata.get("url", ""),
                     "name": rec.get("name", ""),
                     "adaptive_support": metadata.get("adaptive_support", "No"),
                     "description": rec.get("justification", ""),
@@ -194,6 +152,7 @@ def recommend(req: RecommendRequest):
 class HealthResponse(BaseModel):
     status: str
     message: str
+
 
 @router.get("/health", response_model=HealthResponse)
 def health_check():
@@ -259,8 +218,3 @@ def search_only(req: RecommendRequest):
             status_code=500,
             detail=f"Search failed: {str(e)}"
         )
-
-
-
-
- 

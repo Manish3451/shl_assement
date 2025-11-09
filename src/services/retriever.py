@@ -14,7 +14,7 @@ STORE_DIR = REPO_ROOT / "data" / "vector_store" / "faiss_langchain_store"
 load_dotenv(REPO_ROOT / ".env")
 
 DEFAULT_ALPHA = 0.7
-DEFAULT_K = 10 
+DEFAULT_K = 20
 DEFAULT_MODE = "hybrid"
 
 TYPES = ["A", "B", "C", "D", "E", "K", "P", "S"]
